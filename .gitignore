@@ -1,0 +1,12 @@
+*__pycache__*
+*.ipynb
+*.idea
+*.coverage
+*.eggs
+*.DS_store
+*/build
+*/dist
+*.egg-info
+*.hypothesis
+*.envrc
+*.env
