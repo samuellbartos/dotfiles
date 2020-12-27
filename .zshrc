@@ -4,7 +4,7 @@ export PATH="/usr/local/bin/python3:$PATH" # home-brew-installed python 3
 
 # fzf setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag -l --hidden --ignore .git -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob \!.git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS='--height 40% --layout=reverse --preview "cat {}"'
 # git setup
