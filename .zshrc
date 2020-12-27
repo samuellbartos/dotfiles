@@ -1,9 +1,6 @@
-# home-brew doctor recommeds
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH" # home-brew doctor recommeds
 
-# home-brew-installed python 3
-export PATH="/usr/local/bin/python3:$PATH"
-
+export PATH="/usr/local/bin/python3:$PATH" # home-brew-installed python 3
 
 # git setup
 
