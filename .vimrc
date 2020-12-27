@@ -11,6 +11,8 @@ Plug 'preservim/nerdtree' " file system explorer
 Plug 'romainl/vim-cool' " unhighlight after search
 call plug#end()
 
+set encoding=utf-8
+
 set termguicolors
 let g:gruvbox_contrast_dark='hard'
 autocmd vimenter * ++nested colorscheme gruvbox
