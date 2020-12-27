@@ -100,4 +100,3 @@ alias ssh-pa='ssh samuelbartos@pa1-convey.vpn.shipmonk.cloud'
 # Pass the env-vars from a file to MYCOMMAND
 # eval $(cat .env | xargs) MYCOMMAND
 # export $(cat .env | xargs)
-
