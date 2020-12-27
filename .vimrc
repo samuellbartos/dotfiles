@@ -44,3 +44,6 @@ au BufNewFile,BufRead *.py set
     \ expandtab
     \ autoindent
     \ fileformat=unix
+
+" NERDTree configuration
+nnoremap <Leader>t :NERDTreeToggle<Enter> " keybinding for toggling NERDTree
