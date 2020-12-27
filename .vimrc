@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox' " gruvbox theme
 Plug 'preservim/nerdtree' " file system explorer
 Plug 'romainl/vim-cool' " unhighlight after search
+Plug 'sheerun/vim-polyglot' " syntax highlighting
 call plug#end()
 
 set encoding=utf-8
@@ -21,7 +22,6 @@ autocmd vimenter * ++nested colorscheme gruvbox
 set list
 set listchars=tab:>-,trail:.,eol:$
 
-syntax on " highlight syntax
 set number " show line numbers
 set noswapfile " disable the swapfile
 set hlsearch " highlight all results
