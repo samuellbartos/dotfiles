@@ -21,12 +21,6 @@ autocmd vimenter * ++nested colorscheme gruvbox
 set list
 set listchars=tab:>-,trail:.,eol:$
 
-" set tab to 4 spaces
-set tabstop=4
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-
 syntax on " highlight syntax
 set number " show line numbers
 set noswapfile " disable the swapfile
@@ -40,3 +34,13 @@ noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
+
+" python PEP8 compliant indentation
+au BufNewFile,BufRead *.py set
+    \ tabstop=4
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=119
+    \ expandtab
+    \ autoindent
+    \ fileformat=unix
