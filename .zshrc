@@ -6,7 +6,8 @@ export PATH="/usr/local/bin/python3:$PATH" # home-brew-installed python 3
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob \!.git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS='--height 40% --layout=reverse --preview "cat {}"'
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
+export FZF_CTRL_T_OPTS="--preview 'cat {}' $FZF_DEFAULT_OPTS"
 # git setup
 
 autoload -Uz compinit && compinit
