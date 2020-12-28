@@ -87,6 +87,8 @@ alias mkenv='mkvirtualenv'
 alias mktmpenv='mktmpenv -n'
 alias rmenv='rmvirtualenv'
 
+# bat configuration
+export BAT_THEME="gruvbox"
 
 #ECR
 alias ecr-eu='docker login -u AWS 515719629808.dkr.ecr.eu-west-1.amazonaws.com -p $(aws ecr get-login-password --region eu-west-1)'
