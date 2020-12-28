@@ -50,8 +50,15 @@ au BufNewFile,BufRead *.py set
 " NERDTree configuration
 nnoremap <Leader>t :NERDTreeToggle<Enter> " keybinding for toggling NERDTree
 
+" RIPGrep configuration
+" make :Rg search through hidden files
+command! -bang -nargs=* Rg
+    \ call fzf#vim#grep(
+    \    'rg --hidden --glob \!.git --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>),
+    \    1,
+    \    fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}),
+    \    <bang>0)
+
 " fzf configuration
 let g:fzf_layout={'down': '40%'} " display in terminal instead of popup
-nnoremap <C-t> :Files<Enter> " keybinding for filename searching
-" make :Rg search through hidden files
-command! -bang -nargs=* Rg call fzf#vim#grep('rg --hidden --glob \!.git --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
+nnoremap <C-t> :GFiles<Enter> " keybinding for filename searching
