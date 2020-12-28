@@ -54,4 +54,4 @@ nnoremap <Leader>t :NERDTreeToggle<Enter> " keybinding for toggling NERDTree
 let g:fzf_layout={'down': '40%'} " display in terminal instead of popup
 nnoremap <C-t> :Files<Enter> " keybinding for filename searching
 " make :Rg search through hidden files
-command! -bang -nargs=* Rg call fzf#vim#grep('rg --hidden --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep('rg --hidden --glob \!.git --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
