@@ -12,6 +12,7 @@ Plug 'romainl/vim-cool' " unhighlight after search
 Plug 'sheerun/vim-polyglot' " syntax highlighting
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy find
 Plug 'junegunn/fzf.vim' " fuzzy find vim commands
+Plug 'preservim/tagbar' " tag browser
 call plug#end()
 
 set encoding=utf-8
@@ -62,3 +63,6 @@ command! -bang -nargs=* Rg
 " fzf configuration
 let g:fzf_layout={'down': '40%'} " display in terminal instead of popup
 nnoremap <C-t> :GFiles<Enter> " keybinding for filename searching
+
+" TagBar configuration
+let g:tagbar_sort=0 " default to sorting by file position
