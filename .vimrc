@@ -13,6 +13,7 @@ Plug 'sheerun/vim-polyglot' " syntax highlighting
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy find
 Plug 'junegunn/fzf.vim' " fuzzy find vim commands
 Plug 'preservim/tagbar' " tag browser
+Plug 'davidhalter/jedi-vim' " goto definition and autocompletions for python
 call plug#end()
 
 set encoding=utf-8
