@@ -22,6 +22,10 @@ set termguicolors
 let g:gruvbox_contrast_dark='hard'
 autocmd vimenter * ++nested colorscheme gruvbox
 
+" remap Leader key to spacebar
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " display whitespace chars
 set list
 set listchars=tab:>-,trail:.,eol:$
