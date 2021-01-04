@@ -90,16 +90,6 @@ alias rmenv='rmvirtualenv'
 # bat configuration
 export BAT_THEME="gruvbox"
 
-#ECR
-alias ecr-eu='docker login -u AWS 515719629808.dkr.ecr.eu-west-1.amazonaws.com -p $(aws ecr get-login-password --region eu-west-1)'
-alias ecr-us='docker login -u AWS 515719629808.dkr.ecr.us-east-1.amazonaws.com -p $(aws ecr get-login-password --region us-east-1)'
-
-# Warehouse servers
-alias ssh-fl='ssh samuelbartos@fl1-convey.vpn.shipmonk.cloud'
-alias ssh-ca='ssh samuelbartos@ca3-convey-tmp.shipmonk.cloud'
-alias ssh-pa='ssh samuelbartos@pa1-convey.vpn.shipmonk.cloud'
-
-
 # Pass the env-vars from a file to MYCOMMAND
 # eval $(cat .env | xargs) MYCOMMAND
 # export $(cat .env | xargs)
