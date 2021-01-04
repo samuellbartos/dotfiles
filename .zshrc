@@ -16,7 +16,7 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 # RPROMPT=\$vcs_info_msg_0_
-PROMPT='%B%F{white}%~%f %F{blue}$vcs_info_msg_0_%f$%b '
+PROMPT='%B%F{white}%~%f %F{blue}$vcs_info_msg_0_%f%F{white}$%f%b '
 zstyle ':vcs_info:git:*' formats '(%b) '
 
 
