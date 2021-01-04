@@ -54,7 +54,7 @@ nnoremap <Leader>t :NERDTreeToggle<Enter> " keybinding for toggling NERDTree
 " make :Rg search through hidden files
 command! -bang -nargs=* Rg
     \ call fzf#vim#grep(
-    \    'rg --hidden --glob \!.git --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>),
+    \    'rg --hidden --glob \!.git --column --line-number --no-heading --color=always --smart-case -- '.shellescape(expand('<cword>')),
     \    1,
     \    fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}),
     \    <bang>0)
