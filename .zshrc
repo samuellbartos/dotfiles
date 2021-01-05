@@ -7,7 +7,7 @@ export PATH="/usr/local/bin/python3:$PATH" # home-brew-installed python 3
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob \!.git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--multi --height 40% --layout=reverse --bind ctrl-a:toggle-all'
-export FZF_CTRL_T_OPTS="--preview 'bat {}' $FZF_DEFAULT_OPTS"
+export FZF_CTRL_T_OPTS="--preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null' $FZF_DEFAULT_OPTS"
 # git setup
 
 autoload -Uz compinit && compinit
