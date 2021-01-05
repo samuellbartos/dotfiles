@@ -31,3 +31,9 @@ set noswapfile " disable the swapfile
 set hlsearch " highlight all results
 set ignorecase " ignore case in search
 set incsearch " show search results as you type
+
+" disable arrow keys
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
