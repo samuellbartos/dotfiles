@@ -8,3 +8,5 @@
     default = current
 [pull]
     ff = only
+[includeIf "gitdir:~/work/open-bean/"]
+    path = ~/work/open-bean/.gitconfig
