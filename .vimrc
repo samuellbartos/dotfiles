@@ -10,6 +10,8 @@ Plug 'morhetz/gruvbox' " gruvbox theme
 Plug 'preservim/nerdtree' " file system explorer
 Plug 'romainl/vim-cool' " unhighlight after search
 Plug 'sheerun/vim-polyglot' " syntax highlighting
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy find
+Plug 'junegunn/fzf.vim' " fuzzy find vim commands
 call plug#end()
 
 set encoding=utf-8
@@ -47,3 +49,7 @@ au BufNewFile,BufRead *.py set
 
 " NERDTree configuration
 nnoremap <Leader>t :NERDTreeToggle<Enter> " keybinding for toggling NERDTree
+
+" fzf configuration
+let g:fzf_layout={'down': '40%'} " display in terminal instead of popup
+nnoremap <C-t> :Files<Enter> " keybinding for filename searching
