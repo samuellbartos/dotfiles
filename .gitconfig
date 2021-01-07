@@ -1,0 +1,10 @@
+[user]
+    name = h8_s
+    email = h8_s@usa.com
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+[push]
+    default = current
+[pull]
+    ff = only
