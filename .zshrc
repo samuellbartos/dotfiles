@@ -90,3 +90,5 @@ alias rmenv='rmvirtualenv'
 
 # bat configuration
 export BAT_THEME="gruvbox"
+
+[ -f "$HOME/.secrets" ] && source "$HOME/.secrets" # secret things
