@@ -8,5 +8,7 @@
     default = current
 [pull]
     ff = only
+[merge]
+    conflictstyle = diff3
 [includeIf "gitdir:~/work/open-bean/"]
     path = ~/work/open-bean/.gitconfig
