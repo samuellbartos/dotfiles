@@ -1,10 +1,13 @@
-# home-brew doctor recommeds
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH" # home-brew doctor recommeds
 
-# home-brew-installed python 3
-export PATH="/usr/local/bin/python3:$PATH"
+export PATH="/usr/local/bin/python3:$PATH" # home-brew-installed python 3
 
-
+# fzf setup
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob \!.git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
+export FZF_CTRL_T_OPTS="--preview 'bat {}' $FZF_DEFAULT_OPTS"
 # git setup
 
 autoload -Uz compinit && compinit
@@ -84,3 +87,5 @@ alias mkenv='mkvirtualenv'
 alias mktmpenv='mktmpenv -n'
 alias rmenv='rmvirtualenv'
 
+# bat configuration
+export BAT_THEME="gruvbox"
