@@ -8,6 +8,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox' " gruvbox theme
 Plug 'preservim/nerdtree' " file system explorer
+Plug 'romainl/vim-cool' " unhighlight after search
 call plug#end()
 
 let g:gruvbox_contrast_dark='hard'
