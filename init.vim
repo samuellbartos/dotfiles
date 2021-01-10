@@ -26,6 +26,7 @@ nnoremap <Esc><Esc> :let @/=""<CR> " clear in buffer search highlights
 " remap Leader key to spacebar
 nnoremap <SPACE> <Nop>
 let mapleader=" "
+tnoremap <Esc> <C-\><C-n> " exit :terminal as any other window
 
 " configure ripgrep
 command! -bang -nargs=* Rg
