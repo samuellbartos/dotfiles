@@ -17,7 +17,7 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 # RPROMPT=\$vcs_info_msg_0_
-PROMPT='%B%F{white}%~%f %F{blue}$vcs_info_msg_0_%f%F{white}$%f%b '
+PROMPT='%B%~ %F{blue}$vcs_info_msg_0_%f$%b '
 zstyle ':vcs_info:git:*' formats '(%b) '
 
 
@@ -62,8 +62,7 @@ alias grh='git reset --hard'
 alias grm='git reset --mixed'
 alias gsw='git show'
 alias gswp='git show --pretty="" --name-status'
-
-alias gl='git log --all --decorate --oneline --graph --pretty=format:"%C(bold magenta)%h%Creset -%C(auto)%d%Creset %s %C(dim green)(%cr) %C(cyan)<%an>%Creset"'
+alias gl='git log --all --oneline --graph --pretty="%C(auto)%h -%d %s %C(cyan)(%cr) %C(blue)<%an>%Creset"'
 # alias gx='git fetch && git checkout master && git pull && git remote prune origin && git branch --merged | grep -v master | xargs -n 1 git branch -d'
 alias gx="git fetch -p && git checkout master && git pull && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"
 
