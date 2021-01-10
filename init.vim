@@ -12,6 +12,8 @@ set number " show line numbers
 set noswapfile " disable the swapfile
 set ignorecase " ignore case in search
 set cursorline " highlight the current line
+set splitright " new window left of the original after vertical split
+set splitbelow " new window below the original after horizontal split
 
 " disable arrow keys
 noremap <up> <nop>
