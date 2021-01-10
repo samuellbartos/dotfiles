@@ -1,5 +1,7 @@
 " plugins
 call plug#begin(stdpath('data') . '/plugged')
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fuzzy find
+Plug 'junegunn/fzf.vim' " fuzzy find vim commands
 call plug#end()
 
 " general settings
@@ -19,3 +21,19 @@ noremap <right> <nop>
 
 " custom bindings
 nnoremap <Esc><Esc> :let @/=""<CR> " clear in buffer search highlights
+" remap Leader key to spacebar
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+" configure ripgrep
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --hidden --glob \!.git ---column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+
+" fzf configuration
+let g:fzf_layout={'down': '40%'} " display in a new window instead of popup
+nnoremap <C-t> :GFiles<CR>
+
+" replace default grep with ripgrep
+set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
