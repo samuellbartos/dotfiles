@@ -20,6 +20,10 @@ noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
+noremap! <up> <nop>
+noremap! <down> <nop>
+noremap! <left> <nop>
+noremap! <right> <nop>
 
 " custom bindings
 nnoremap <Esc><Esc> :let @/=""<CR> " clear in buffer search highlights
