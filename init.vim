@@ -50,9 +50,6 @@ nnoremap <Esc><Esc> :let @/=""<CR>
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
-" exit :terminal as any other window
-tnoremap <Esc> <C-\><C-n>
-
 " disable arrow keys
 noremap <up> <nop>
 noremap <down> <nop>
