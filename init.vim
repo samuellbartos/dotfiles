@@ -13,6 +13,9 @@ call plug#end()
 
 " GENERAL SETTINGS
 
+" vim-plug implicitly runs filetype indent on + syntax enable => disable unwanted auto-indent
+filetype indent off
+
 " encoding
 set encoding=utf-8
 
