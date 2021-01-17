@@ -82,7 +82,3 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 source /usr/local/bin/virtualenvwrapper.sh
-
-alias mkenv='mkvirtualenv'
-alias mktmpenv='mktmpenv -n'
-alias rmenv='rmvirtualenv'
