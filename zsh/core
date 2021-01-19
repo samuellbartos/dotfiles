@@ -1,0 +1,10 @@
+# home-brew doctor recommeds
+export PATH="/usr/local/sbin:$PATH"
+
+# defaut editor
+export EDITOR='nvim'
+
+# aliases
+alias l='ls -lahFGT'
+alias less='less -FIRX'
+
