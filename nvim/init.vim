@@ -13,6 +13,9 @@ call plug#end()
 
 " CORE
 
+" define colorscheme
+colorscheme dim
+
 " vim-plug implicitly runs filetype indent on + syntax enable => disable unwanted auto-indent
 filetype indent off
 
@@ -33,9 +36,6 @@ set noswapfile
 
 " ignore case in search
 set ignorecase
-
-" highlight the current line
-set cursorline
 
 " new window left of the original after vertical split
 set splitright
