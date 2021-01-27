@@ -1,3 +1,6 @@
+" define colorscheme
+colorscheme dim
+
 " vim-plug implicitly runs filetype indent on + syntax enable => disable unwanted auto-indent
 filetype indent off
 
