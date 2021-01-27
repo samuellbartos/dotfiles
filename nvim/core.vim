@@ -22,9 +22,6 @@ set noswapfile
 " ignore case in search
 set ignorecase
 
-" highlight the current line
-set cursorline
-
 " new window left of the original after vertical split
 set splitright
 
