@@ -2,4 +2,4 @@
 let g:fzf_layout={'down': '40%'}
 
 " match binding from zsh
-nnoremap <C-t> :GFiles<CR>
+nnoremap <C-t> :Files<CR>
