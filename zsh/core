@@ -4,6 +4,9 @@ export PATH="/usr/local/sbin:$PATH"
 # defaut editor
 export EDITOR='nvim'
 
+# emacs key bindings
+bindkey -e
+
 # aliases
 alias l='ls -lahFGT'
 alias less='less -FIRX'
