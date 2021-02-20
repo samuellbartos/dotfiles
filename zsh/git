@@ -60,5 +60,4 @@ alias gswp='git show --pretty="" --name-status'
 
 alias gt='git tag'
 
-# alias gx='git fetch && git checkout master && git pull && git remote prune origin && git branch --merged | grep -v master | xargs -n 1 git branch -d'
 alias gx="git fetch -p && git checkout master && git pull && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"
