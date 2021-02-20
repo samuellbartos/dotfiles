@@ -3,7 +3,7 @@
 *.idea
 *.coverage
 *.eggs
-*.DS_store
+*.DS_Store
 */build
 */dist
 *.egg-info
