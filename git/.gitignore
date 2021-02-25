@@ -4,8 +4,8 @@
 *.coverage
 *.eggs
 *.DS_Store
-*/build
-*/dist
+*build
+*dist
 *.egg-info
 *.hypothesis
 *.envrc
