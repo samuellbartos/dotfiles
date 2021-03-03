@@ -32,6 +32,12 @@ font:
   use_thin_strokes: true
 
 
+colors:
+  cursor:
+      text: '0x1d1f21'
+      cursor: '0xc5c8c6'
+
+
 selection:
   save_to_clipboard: true
 
