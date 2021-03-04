@@ -32,14 +32,17 @@ font:
   use_thin_strokes: true
 
 
-colors:
-  cursor:
+schemes:
+  default: &default
+    cursor:
+        text: '0x1d1f21'
+        cursor: '0xc5c8c6'
+    selection:
       text: '0x1d1f21'
-      cursor: '0xc5c8c6'
+      background: '0xc5c8c6'
 
-  selection:
-    text: '0x1d1f21'
-    background: '0xc5c8c6'
+
+colors: *default
 
 
 selection:
