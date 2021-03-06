@@ -12,3 +12,12 @@
     conflictstyle = diff3
 [includeIf "gitdir:~/work/open-bean/"]
     path = ~/work/open-bean/.gitconfig
+[log]
+    graphColors = white
+[color "decorate"]
+    HEAD = bold yellow
+    branch = bold brightblue
+    remoteBranch = bold blue
+    tag = bold blue
+[diff "color"]
+    commit = brightwhite
