@@ -16,8 +16,8 @@
     graphColors = white
 [color "decorate"]
     HEAD = bold yellow
-    branch = bold brightblue
-    remoteBranch = bold blue
-    tag = bold blue
+    branch = bold blue
+    remoteBranch = blue
+    tag = blue
 [diff "color"]
     commit = brightwhite
