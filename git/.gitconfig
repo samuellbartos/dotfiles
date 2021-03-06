@@ -15,17 +15,17 @@
 [log]
     graphColors = white
 [color "decorate"]
-    HEAD = bold yellow
-    branch = bold blue
-    remoteBranch = blue
-    tag = blue
+    HEAD = bold brightyellow
+    branch = bold brightmagenta
+    remoteBranch = brightmagenta
+    tag = brightmagenta
 [diff "color"]
     commit = brightwhite
     meta = bold brightwhite
     frag = bold brightwhite
-    old = yellow
-    new = blue
+    old = brightyellow
+    new = brightmagenta
 [color "branch"]
-    current = bold blue
-    local = bold blue
-    upstream = blue
+    current = bold brightmagenta
+    local = bold brightmagenta
+    upstream = brightmagenta
