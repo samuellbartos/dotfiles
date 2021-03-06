@@ -21,3 +21,7 @@
     tag = blue
 [diff "color"]
     commit = brightwhite
+[color "branch"]
+    current = bold blue
+    local = bold blue
+    upstream = blue
