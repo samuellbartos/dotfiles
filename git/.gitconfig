@@ -21,6 +21,10 @@
     tag = blue
 [diff "color"]
     commit = brightwhite
+    meta = bold brightwhite
+    frag = bold brightwhite
+    old = yellow
+    new = blue
 [color "branch"]
     current = bold blue
     local = bold blue
