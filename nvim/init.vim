@@ -61,3 +61,6 @@ noremap! <up> <nop>
 noremap! <down> <nop>
 noremap! <left> <nop>
 noremap! <right> <nop>
+
+" print highlight group under cursor
+nnoremap zS :echo join(reverse(map(synstack(line('.'), col('.')), 'synIDattr(v:val,"name")')),' ')<cr>
