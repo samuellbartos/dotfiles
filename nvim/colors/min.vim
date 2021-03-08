@@ -28,3 +28,6 @@ highlight! link Search Cursor
 highlight! link LineNr Normal
 highlight! link CursorLineNr Normal
 highlight! link NonText Normal
+
+" highlight the current line
+set cursorline
