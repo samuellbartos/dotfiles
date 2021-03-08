@@ -41,8 +41,39 @@ schemes:
       text: '0x1d1f21'
       background: '0xc5c8c6'
 
+  min: &min
+    primary:
+      background: '#121212'
+      foreground: '#D0D0D0'
+    cursor:
+      text: '#121212'
+      cursor: '#D0D0D0'
+    selection:
+      text: '#121212'
+      background: '#D0D0D0'
+    normal:
+      black: '#121212'
+      red: '#F43753'
+      green: '#FFC24B'
+      yellow: '#569F7A'
+      blue: '#699B9B'
+      magenta: '#3E3D32'
+      cyan: '#6B6B6B'
+      white: '#D0D0D0'
+    bright:
+      black: '#262626'
+      red: '#FF0000'
+      green: '#FFC24B'
+      yellow: '#569F7A'
+      blue: '#699B9B'
+      magenta: '#49483E'
+      cyan: '#B0B0B0'
+      white: '#ffffff'
 
-colors: *default
+draw_bold_text_with_bright_colors: false
+
+
+colors: *min
 
 
 selection:
