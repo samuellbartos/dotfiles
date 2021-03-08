@@ -13,7 +13,7 @@
 [includeIf "gitdir:~/work/open-bean/"]
     path = ~/work/open-bean/.gitconfig
 [log]
-    graphColors = white
+    graphColors = cyan
 [color "decorate"]
     HEAD = bold red
     branch = bold green
