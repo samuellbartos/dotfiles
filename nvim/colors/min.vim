@@ -12,6 +12,7 @@ highlight Cursor cterm=NONE ctermbg=7 ctermfg=0
 highlight Normal cterm=NONE ctermbg=0 ctermfg=7
 highlight Error cterm=NONE ctermbg=0 ctermfg=1
 highlight TODO cterm=NONE ctermbg=0 ctermfg=2
+highlight CursorLine cterm=NONE ctermbg=8 ctermfg=7
 
 " syntax
 highlight! link Statement Normal
@@ -28,3 +29,6 @@ highlight! link Search Cursor
 highlight! link LineNr Normal
 highlight! link CursorLineNr Normal
 highlight! link NonText Normal
+
+" highlight the current line
+set cursorline
