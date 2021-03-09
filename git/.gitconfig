@@ -19,6 +19,7 @@
     branch = bold white
     remoteBranch = bold white
     tag = bold white
+    stash = bold green
 [diff "color"]
     commit = white
     frag = bold white
