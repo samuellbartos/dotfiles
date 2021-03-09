@@ -24,4 +24,5 @@
     frag = bold white
 [color "branch"]
     current = bold green
-    upstream = green
+    local = white
+    upstream = white
