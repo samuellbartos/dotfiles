@@ -15,10 +15,10 @@
 [log]
     graphColors = cyan
 [color "decorate"]
-    HEAD = bold red
-    branch = bold green
-    remoteBranch = green
-    tag = green
+    HEAD = bold green
+    branch = bold white
+    remoteBranch = bold white
+    tag = bold white
 [diff "color"]
     commit = white
     frag = bold white
