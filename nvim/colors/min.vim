@@ -29,6 +29,8 @@ highlight! link Search Cursor
 highlight! link LineNr Normal
 highlight! link CursorLineNr Normal
 highlight! link NonText Normal
+highlight! link Pmenu CursorLine
+highlight PmenuSel cterm=bold ctermbg=8 ctermfg=2
 
 " highlight the current line
 set cursorline
