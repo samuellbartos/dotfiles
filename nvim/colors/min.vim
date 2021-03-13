@@ -7,7 +7,7 @@ endif
 " colorscheme name
 let colors_name = "min"
 
-"base 
+"base
 highlight Cursor cterm=NONE ctermbg=7 ctermfg=0
 highlight Normal cterm=NONE ctermbg=0 ctermfg=7
 highlight Error cterm=NONE ctermbg=0 ctermfg=1
