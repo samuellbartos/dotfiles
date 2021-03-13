@@ -13,13 +13,13 @@ highlight Normal cterm=NONE ctermbg=None ctermfg=7
 highlight Error cterm=NONE ctermbg=None ctermfg=1
 highlight TODO cterm=NONE ctermbg=None ctermfg=2
 highlight CursorLine cterm=NONE ctermbg=8 ctermfg=7
+highlight Comment cterm=NONE ctermbg=None ctermfg=6
 highlight PmenuSel cterm=bold ctermbg=8 ctermfg=2
 
 " syntax
 highlight! link Statement Normal
 highlight! link Type Normal
 highlight! link Constant Normal
-highlight! link Comment Normal
 highlight! link Identifier Normal
 highlight! link Preproc Normal
 highlight! link Special Normal
