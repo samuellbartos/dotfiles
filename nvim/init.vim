@@ -43,6 +43,9 @@ set splitright
 " new window below the original after horizontal split
 set splitbelow
 
+" sync clipboard also (+) with the unnamed " register
+set clipboard+=unnamedplus
+
 " BINDINGS
 
 " clear in buffer search highlights
