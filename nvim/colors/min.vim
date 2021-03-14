@@ -33,6 +33,7 @@ highlight! link Constant Normal
 highlight! link Identifier Normal
 highlight! link Preproc Normal
 highlight! link Special Normal
+highlight! link diffRemoved Error
 
 " highlight the current line
 set cursorline
