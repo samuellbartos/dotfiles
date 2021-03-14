@@ -8,6 +8,7 @@ compdef g='git'
 alias ga='git add'
 alias gap='git add --patch'
 alias gau='git add --update'
+alias gapu='git add --patch --update'
 
 # git branch
 alias gb='git branch'
