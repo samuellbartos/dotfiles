@@ -24,6 +24,7 @@ alias gmm='git commit --message'
 # git checkout
 alias gc='git checkout'
 alias gcb='git checkout -b'
+alias gcB='git checkout -B'
 
 # git cherry-pick
 alias gcp='git cherry-pick'
