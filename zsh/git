@@ -6,19 +6,19 @@ compdef g='git'
 
 # git add
 alias ga='git add'
-alias gap='git add -p'
-alias gau='git add -u'
+alias gap='git add --patch'
+alias gau='git add --update'
 
 # git branch
 alias gb='git branch'
-alias gbf='git branch -f'
-alias gbm='git branch -m'
+alias gbf='git branch --force'
+alias gbm='git branch --move'
 
 # git commit
 alias gm='git commit'
 alias gmf='git commit --fixup'
 alias gma='git commit --amend'
-alias gmm='git commit -m'
+alias gmm='git commit --message'
 
 # git checkout
 alias gc='git checkout'
@@ -45,12 +45,12 @@ alias gpl='git pull'
 
 # git push
 alias gp='git push'
-alias gpu='git push -u'
+alias gpu='git push --set-upstream'
 alias gpf='git push --force-with-lease'
 
 # git rebase
-alias gri='git rebase -i'
-alias gria='git rebase -i --autosquash'
+alias gri='git rebase --interactive'
+alias gria='git rebase --interactive --autosquash'
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
 
@@ -64,10 +64,10 @@ alias grm='git reset --mixed'
 
 # git stash
 alias gsh='git stash'
-alias gshk='git stash -k'
+alias gshk='git stash --keep-index'
 alias gshp='git stash pop'
 alias gshd='git stash drop'
-alias gshswp='git stash show -p'
+alias gshswp='git stash show --pretty'
 
 # git status
 alias gs='git status'
@@ -80,4 +80,4 @@ alias gswp='git show --pretty="" --name-status'
 alias gt='git tag'
 
 # remove tracking branches deleted on remote
-alias gx="git fetch -p && git checkout master && git pull && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"
+alias gx="git fetch --prune && git checkout master && git pull && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"
