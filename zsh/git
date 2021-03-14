@@ -45,7 +45,7 @@ alias gpl='git pull'
 
 # git push
 alias gp='git push'
-alias gpu='git push --set-upstream'
+alias gpsu='git push --set-upstream'
 alias gpf='git push --force-with-lease'
 
 # git rebase
