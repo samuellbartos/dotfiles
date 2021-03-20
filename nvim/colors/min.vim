@@ -25,6 +25,7 @@ highlight! link LineNr Normal
 highlight! link CursorLineNr Normal
 highlight! link NonText Normal
 highlight! link Pmenu CursorLine
+highlight! link LineNr Comment
 
 " syntax derived
 highlight! link Statement Normal
