@@ -21,8 +21,6 @@ highlight TODO cterm=NONE ctermbg=None ctermfg=2
 " special derived
 highlight! link Visual Cursor
 highlight! link Search Cursor
-highlight! link LineNr Normal
-highlight! link CursorLineNr Normal
 highlight! link NonText Normal
 highlight! link Pmenu CursorLine
 highlight! link LineNr Comment
