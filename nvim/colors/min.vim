@@ -33,6 +33,8 @@ highlight! link Constant Normal
 highlight! link Identifier Normal
 highlight! link Preproc Normal
 highlight! link Special Normal
+
+" git
 highlight! link diffRemoved Error
 highlight! link diffAdded TODO
 
