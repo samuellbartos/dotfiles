@@ -36,5 +36,10 @@ highlight! link Special Normal
 highlight! link diffRemoved Error
 highlight! link diffAdded TODO
 
+" fzf
+highlight! link fzf1 Cursor
+highlight! link fzf2 Cursor
+highlight! link fzf3 Cursor
+
 " highlight the current line
 set cursorline
