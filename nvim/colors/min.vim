@@ -37,7 +37,7 @@ highlight! link TODO Error
 
 " git
 highlight! link diffRemoved Error
-highlight! link diffAdded TODO
+highlight! link diffAdded Title
 
 " fzf
 highlight! link fzf1 Cursor
