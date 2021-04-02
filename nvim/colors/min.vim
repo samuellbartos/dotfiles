@@ -44,5 +44,9 @@ highlight! link fzf1 Cursor
 highlight! link fzf2 Cursor
 highlight! link fzf3 Cursor
 
+" python
+highlight! link pythonStatement Comment
+highlight! link pythonString Title
+
 " highlight the current line
 set cursorline
