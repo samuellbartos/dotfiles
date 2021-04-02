@@ -16,6 +16,7 @@ highlight PmenuSel cterm=bold ctermbg=8 ctermfg=7
 " base syntax
 highlight Normal cterm=NONE ctermbg=None ctermfg=7
 highlight Error cterm=NONE ctermbg=None ctermfg=1
+highlight Title cterm=NONE ctermbg=None ctermfg=2
 
 " special derived
 highlight! link Visual Cursor
