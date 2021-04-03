@@ -8,14 +8,14 @@ nnoremap <C-t> :Files<CR>
 let g:fzf_colors =
     \ { 'fg':    ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
-    \ 'hl':      ['fg', 'TODO'],
+    \ 'hl':      ['fg', 'Error'],
     \ 'fg+':     ['fg', 'Normal'],
     \ 'bg+':     ['bg', 'Normal'],
-    \ 'hl+':     ['fg', 'TODO'],
+    \ 'hl+':     ['fg', 'Error'],
     \ 'info':    ['fg', 'Normal'],
     \ 'border':  ['fg', 'Normal'],
     \ 'prompt':  ['fg', 'Normal'],
-    \ 'pointer': ['fg', 'TODO'],
-    \ 'marker':  ['fg', 'TODO'],
+    \ 'pointer': ['fg', 'Error'],
+    \ 'marker':  ['fg', 'Error'],
     \ 'spinner': ['fg', 'Normal'],
     \ 'header':  ['fg', 'Normal'] }
