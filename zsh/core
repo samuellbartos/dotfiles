@@ -11,3 +11,5 @@ bindkey -e
 alias l='ls -lahFGT'
 alias less='less -FIRX'
 
+# ls colors
+export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
