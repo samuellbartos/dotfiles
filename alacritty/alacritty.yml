@@ -49,7 +49,7 @@ schemes:
       cursor: *bright-white
     selection:
       text: *black
-      background: *white
+      background: *col-II
     normal:
       black: *black
       yellow: '#F43753'
