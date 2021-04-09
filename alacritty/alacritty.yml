@@ -32,26 +32,32 @@ font:
   use_thin_strokes: true
 
 
+.white: &white '#D0D0D0'
+.black: &black '#121212'
+.col-I: &col-I '#699B9B'
+.col-II: &col-II '#FFC24B'
+
+
 schemes:
   min: &min
     primary:
-      background: '#121212'
-      foreground: '#D0D0D0'
+      background: *black
+      foreground: *white
     cursor:
-      text: '#121212'
-      cursor: '#D0D0D0'
+      text: *black
+      cursor: *white
     selection:
-      text: '#121212'
-      background: '#D0D0D0'
+      text: *black
+      background: *white
     normal:
-      black: '#121212'
+      black: *black
       yellow: '#F43753'
       blue: '#569F7A'
-      red: '#FFC24B'
-      green: '#699B9B'
+      red: *col-II
+      green: *col-I
       magenta: '#3E3D32'
       cyan: '#6B6B6B'
-      white: '#D0D0D0'
+      white: *white
     bright:
       black: '#262626'
       yellow: '#FF0000'
