@@ -12,7 +12,7 @@ highlight Cursor cterm=NONE ctermbg=7 ctermfg=0
 highlight Comment cterm=NONE ctermbg=None ctermfg=6
 highlight CursorLine cterm=NONE ctermbg=8 ctermfg=NONE
 highlight PmenuSel cterm=bold ctermbg=8 ctermfg=7
-highlight Visual cterm=NONE ctermbg=7 ctermfg=0
+highlight Visual cterm=NONE ctermbg=1 ctermfg=0
 
 " base syntax
 highlight Normal cterm=NONE ctermbg=None ctermfg=7
