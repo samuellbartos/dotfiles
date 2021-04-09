@@ -20,7 +20,7 @@ highlight Error cterm=NONE ctermbg=None ctermfg=1
 highlight Title cterm=NONE ctermbg=None ctermfg=2
 
 " special derived
-highlight! link Search Cursor
+highlight! link Search Visual
 highlight! link NonText Normal
 highlight! link Pmenu CursorLine
 highlight! link LineNr Comment
