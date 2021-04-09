@@ -46,7 +46,7 @@ schemes:
       foreground: *white
     cursor:
       text: *black
-      cursor: *white
+      cursor: *bright-white
     selection:
       text: *black
       background: *white
