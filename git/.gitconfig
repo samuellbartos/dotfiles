@@ -27,3 +27,5 @@
     current = bold green
     local = white
     upstream = white
+[color "interactive"]
+    prompt = bold white
