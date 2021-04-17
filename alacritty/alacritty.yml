@@ -33,7 +33,7 @@ font:
 
 
 .white: &white '#D0D0D0'
-.bright-white+: &bright-white '#FFFFFF'
+.bright-white: &bright-white '#FFFFFF'
 .black: &black '#121212'
 .col-I: &col-I '#699B9B'
 .col-II: &col-II '#FFC24B'
