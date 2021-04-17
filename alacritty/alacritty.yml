@@ -34,6 +34,8 @@ font:
 
 .grey1: &grey1 '#121212'
 .grey2: &grey2 '#262626'
+.grey3: &grey3 '#565656'
+.grey4: &grey4 '#ABABAB'
 .grey5: &grey5 '#D0D0D0'
 .grey6: &grey6 '#FFFFFF'
 .col-I: &col-I '#699B9B'
@@ -58,7 +60,7 @@ schemes:
       red: *col-II
       green: *col-I
       magenta: '#3E3D32'
-      cyan: '#6B6B6B'
+      cyan: *grey3
       white: *grey5
     bright:
       black: *grey2
@@ -67,7 +69,7 @@ schemes:
       red: '#FFC24B'
       green: '#699B9B'
       magenta: '#49483E'
-      cyan: '#B0B0B0'
+      cyan: *grey4
       white: *grey6
 
 draw_bold_text_with_bright_colors: false
