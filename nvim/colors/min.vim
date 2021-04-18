@@ -20,30 +20,30 @@ highlight N2N ctermbg=NONE ctermfg=2    cterm=NONE
 "special
 highlight! link Comment N6N
 highlight! link CursorLine 8NN
-highlight! link PmenuSel 87b
-highlight! link Visual 10N
-highlight! link Search 10N
+highlight! link CursorLineNr 87b
+highlight! link LineNr N6N
+highlight! link MatchParen 10N
 highlight! link NonText N7N
 highlight! link Pmenu 8NN
-highlight! link LineNr N6N
-highlight! link CursorLineNr 87b
-highlight! link MatchParen 10N
+highlight! link PmenuSel 87b
+highlight! link Search 10N
+highlight! link Visual 10N
 
 " syntax
-highlight! link Normal N7N
-highlight! link Error N1N
-highlight! link Title N2N
-highlight! link Statement N7N
-highlight! link Type N7N
 highlight! link Constant N7N
+highlight! link Error N1N
 highlight! link Identifier N7N
+highlight! link Normal N7N
 highlight! link Preproc N7N
 highlight! link Special N7N
+highlight! link Statement N7N
+highlight! link Title N2N
 highlight! link TODO N1N
+highlight! link Type N7N
 
 " git
-highlight! link diffRemoved N1N
 highlight! link diffAdded N2N
+highlight! link diffRemoved N1N
 
 " fzf
 highlight! link fzf1 70N
