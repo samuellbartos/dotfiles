@@ -32,11 +32,11 @@ font:
   use_thin_strokes: true
 
 
-.grey1: &grey1 '#121212'
-.grey2: &grey2 '#262626'
-.grey3: &grey3 '#565656'
-.grey4: &grey4 '#ABABAB'
-.grey5: &grey5 '#D0D0D0'
+.grey1: &grey1 '#202020'
+.grey2: &grey2 '#2A2A2A'
+.grey3: &grey3 '#7C7C7C'
+.grey4: &grey4 '#A9A9A9'
+.grey5: &grey5 '#F4F4F4'
 .grey6: &grey6 '#FFFFFF'
 .col-I: &col-I '#699B9B'
 .col-II: &col-II '#FFC24B'
