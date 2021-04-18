@@ -7,47 +7,52 @@ endif
 " colorscheme name
 let colors_name = "min"
 
-"base special
-highlight Cursor cterm=NONE ctermbg=7 ctermfg=0
-highlight Comment cterm=NONE ctermbg=None ctermfg=6
-highlight CursorLine cterm=NONE ctermbg=8 ctermfg=NONE
-highlight PmenuSel cterm=bold ctermbg=8 ctermfg=7
-highlight Visual cterm=NONE ctermbg=1 ctermfg=0
+" base
+highlight 70N ctermbg=7    ctermfg=0    cterm=NONE
+highlight N6N ctermbg=NONE ctermfg=6    cterm=NONE
+highlight 8NN ctermbg=8    ctermfg=NONE cterm=NONE
+highlight 87b ctermbg=8    ctermfg=7    cterm=bold
+highlight 10N ctermbg=1    ctermfg=0    cterm=NONE
+highlight N7N ctermbg=NONE ctermfg=7    cterm=NONE
+highlight N1N ctermbg=NONE ctermfg=1    cterm=NONE
+highlight N2N ctermbg=NONE ctermfg=2    cterm=NONE
 
-" base syntax
-highlight Normal cterm=NONE ctermbg=None ctermfg=7
-highlight Error cterm=NONE ctermbg=None ctermfg=1
-highlight Title cterm=NONE ctermbg=None ctermfg=2
+"special
+highlight! link Comment N6N
+highlight! link CursorLine 8NN
+highlight! link CursorLineNr 87b
+highlight! link LineNr N6N
+highlight! link MatchParen 10N
+highlight! link NonText N7N
+highlight! link Pmenu 8NN
+highlight! link PmenuSel 87b
+highlight! link Search 10N
+highlight! link Visual 10N
 
-" special derived
-highlight! link Search Visual
-highlight! link NonText Normal
-highlight! link Pmenu CursorLine
-highlight! link LineNr Comment
-highlight! link CursorLineNr PmenuSel
-highlight! link MatchParen Visual
-
-" syntax derived
-highlight! link Statement Normal
-highlight! link Type Normal
-highlight! link Constant Normal
-highlight! link Identifier Normal
-highlight! link Preproc Normal
-highlight! link Special Normal
-highlight! link TODO Error
+" syntax
+highlight! link Constant N7N
+highlight! link Error N1N
+highlight! link Identifier N7N
+highlight! link Normal N7N
+highlight! link Preproc N7N
+highlight! link Special N7N
+highlight! link Statement N7N
+highlight! link Title N2N
+highlight! link TODO N1N
+highlight! link Type N7N
 
 " git
-highlight! link diffRemoved Error
-highlight! link diffAdded Title
+highlight! link diffAdded N2N
+highlight! link diffRemoved N1N
 
 " fzf
-highlight! link fzf1 Cursor
-highlight! link fzf2 Cursor
-highlight! link fzf3 Cursor
+highlight! link fzf1 70N
+highlight! link fzf2 70N
+highlight! link fzf3 70N
 
 " python
-highlight! link pythonStatement Comment
-highlight! link pythonString Title
+highlight! link pythonStatement N6N
+highlight! link pythonString N2N
 
 " highlight the current line
 set cursorline
