@@ -9,6 +9,7 @@ let colors_name = "min"
 
 " base
 highlight 70N ctermbg=7    ctermfg=0    cterm=NONE
+highlight E0N ctermbg=14   ctermfg=0    cterm=NONE
 highlight N6N ctermbg=NONE ctermfg=6    cterm=NONE
 highlight 8NN ctermbg=8    ctermfg=NONE cterm=NONE
 highlight 87b ctermbg=8    ctermfg=7    cterm=bold
@@ -26,8 +27,8 @@ highlight! link MatchParen 10N
 highlight! link NonText N7N
 highlight! link Pmenu 8NN
 highlight! link PmenuSel 70N
-highlight! link Search 10N
-highlight! link Visual 10N
+highlight! link Search E0N
+highlight! link Visual E0N
 
 " syntax
 highlight! link Constant N7N
