@@ -25,7 +25,7 @@ highlight! link LineNr N6N
 highlight! link MatchParen 10N
 highlight! link NonText N7N
 highlight! link Pmenu 8NN
-highlight! link PmenuSel 87b
+highlight! link PmenuSel 70N
 highlight! link Search 10N
 highlight! link Visual 10N
 
