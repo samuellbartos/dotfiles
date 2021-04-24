@@ -32,9 +32,12 @@ font:
   use_thin_strokes: true
 
 
-.white: &white '#D0D0D0'
-.bright-white+: &bright-white '#FFFFFF'
-.black: &black '#121212'
+.grey1: &grey1 '#202020'
+.grey2: &grey2 '#2A2A2A'
+.grey3: &grey3 '#7C7C7C'
+.grey4: &grey4 '#A9A9A9'
+.grey5: &grey5 '#F4F4F4'
+.grey6: &grey6 '#FFFFFF'
 .col-I: &col-I '#699B9B'
 .col-II: &col-II '#FFC24B'
 
@@ -42,32 +45,32 @@ font:
 schemes:
   min: &min
     primary:
-      background: *black
-      foreground: *white
+      background: *grey1
+      foreground: *grey5
     cursor:
-      text: *black
-      cursor: *bright-white
+      text: *grey1
+      cursor: *grey6
     selection:
-      text: *black
+      text: *grey1
       background: *col-II
     normal:
-      black: *black
+      black: *grey1
       yellow: '#F43753'
       blue: '#569F7A'
       red: *col-II
       green: *col-I
       magenta: '#3E3D32'
-      cyan: '#6B6B6B'
-      white: *white
+      cyan: *grey3
+      white: *grey5
     bright:
-      black: '#262626'
+      black: *grey2
       yellow: '#FF0000'
       blue: '#569F7A'
       red: '#FFC24B'
       green: '#699B9B'
       magenta: '#49483E'
-      cyan: '#B0B0B0'
-      white: *bright-white
+      cyan: *grey4
+      white: *grey6
 
 draw_bold_text_with_bright_colors: false
 
