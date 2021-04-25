@@ -52,7 +52,7 @@ schemes:
       cursor: *grey6
     selection:
       text: *grey1
-      background: *col-II
+      background: *grey4
     normal:
       black: *grey1
       yellow: '#F43753'
