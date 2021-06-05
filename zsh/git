@@ -59,6 +59,7 @@ alias gra='git rebase --abort'
 # git restore
 alias gr='git restore'
 alias grs='git restore --staged'
+alias grsw='git restore --staged --worktree'
 
 # git reset
 alias grh='git reset --hard'
