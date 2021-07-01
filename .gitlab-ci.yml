@@ -2,4 +2,3 @@ include:
   - project: 'h8_s/cicd'
     ref: '0.6.3'
     file: '/autotag.yml'
-
