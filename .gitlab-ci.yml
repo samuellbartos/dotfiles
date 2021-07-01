@@ -1,5 +1,5 @@
 include:
   - project: 'h8_s/cicd'
-    ref: '0.3.0'
+    ref: '0.6.3'
     file: '/autotag.yml'
 
