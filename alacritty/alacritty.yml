@@ -32,50 +32,45 @@ font:
   use_thin_strokes: true
 
 
-.grey1: &grey1 '#202020'
-.grey2: &grey2 '#2A2A2A'
-.grey3: &grey3 '#7C7C7C'
-.grey4: &grey4 '#A9A9A9'
-.grey5: &grey5 '#F4F4F4'
-.grey6: &grey6 '#FFFFFF'
-.col-I: &col-I '#699B9B'
-.col-II: &col-II '#FFC24B'
-
-
-schemes:
-  min: &min
-    primary:
-      background: *grey1
-      foreground: *grey5
-    cursor:
-      text: *grey1
-      cursor: *grey6
-    selection:
-      text: *grey1
-      background: *grey4
-    normal:
-      black: *grey1
-      yellow: '#F43753'
-      blue: '#569F7A'
-      red: *col-II
-      green: *col-I
-      magenta: '#3E3D32'
-      cyan: *grey3
-      white: *grey5
-    bright:
-      black: *grey2
-      yellow: '#FF0000'
-      blue: '#569F7A'
-      red: '#FFC24B'
-      green: '#699B9B'
-      magenta: '#49483E'
-      cyan: *grey4
-      white: *grey6
-
-draw_bold_text_with_bright_colors: false
-
-
-colors: *min
+colors:
+  primary:
+    background: '#242933'
+    foreground: '#d8dee9'
+    dim_foreground: '#a5abb6'
+  cursor:
+    text: '#242933'
+    cursor: '#d8dee9'
+  vi_mode_cursor:
+    text: '#242933'
+    cursor: '#d8dee9'
+  selection:
+    text: CellForeground
+    background: '#4c566a'
+  search:
+    matches:
+      foreground: CellBackground
+      background: '#88c0d0'
+    bar:
+      background: '#434c5e'
+      foreground: '#d8dee9'
+  normal:
+    black: '#242933'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#88c0d0'
+    white: '#d8dee9'
+  bright:
+    black: '#4c566a'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#8fbcbb'
+    white: '#eceff4'
 
 
 selection:
