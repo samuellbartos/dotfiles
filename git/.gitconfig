@@ -13,18 +13,18 @@
 [includeIf "gitdir:~/work/open-bean/"]
     path = ~/work/open-bean/.gitconfig
 [log]
-    graphColors = cyan
+    graphColors = blue
 [color "decorate"]
-    HEAD = bold green
+    HEAD = bold yellow
     branch = bold white
     remoteBranch = bold white
     tag = bold white
-    stash = bold green
+    stash = bold yellow
 [diff "color"]
     commit = white
     frag = bold white
 [color "branch"]
-    current = bold green
+    current = bold yellow
     local = white
     upstream = white
 [color "interactive"]
