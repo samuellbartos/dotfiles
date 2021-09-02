@@ -2,5 +2,5 @@
 --colors=line:style:nobold
 --colors=path:fg:white
 --colors=path:style:bold
---colors=match:fg:green
+--colors=match:fg:yellow
 --colors=match:style:nobold

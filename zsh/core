@@ -12,4 +12,4 @@ alias l='ls -lahFGT'
 alias less='less -FIRX'
 
 # ls colors
-export LSCOLORS=cxbxxxxxbxbxxxxxxxxxxx
+export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
