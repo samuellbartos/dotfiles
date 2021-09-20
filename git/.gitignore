@@ -6,14 +6,14 @@
 *.coverage
 # dir for egg distribution of python packages
 *.eggs
+# egg metadata
+*.egg-info
 # macOS attributes for dirs, e.g. position of icons, etc.
 *.DS_Store
 # dir for wheel distribution of python packages
 *build
 # dir for source distribution of python packages
 *dist
-# egg metadata
-*.egg-info
 # artefacts from hypothesis package (property based testing)
 *.hypothesis
 # secrets related to the repo
