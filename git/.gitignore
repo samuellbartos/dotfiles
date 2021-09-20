@@ -1,6 +1,5 @@
 *__pycache__*
 *.ipynb
-*.idea
 *.coverage
 *.eggs
 *.DS_Store
@@ -8,6 +7,5 @@
 *dist
 *.egg-info
 *.hypothesis
-*.envrc
 *.env
 *tmp
