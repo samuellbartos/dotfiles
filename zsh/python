@@ -1,16 +1,4 @@
-# home-brew-installed python 3
-export PATH="/usr/local/bin/python3:$PATH"
+PYTHON_IMAGE="python:3.9.7-slim-buster"
 
-# don't create .pyc files
-export PYTHONDONTWRITEBYTECODE="1"
-
-# virtualenvwrapper setup
-export WORKON_HOME="$HOME/.virtualenvs"
-export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
-export VIRTUALENVWRAPPER_VIRTUALENV="/usr/local/bin/virtualenv"
-export VIRTUAL_ENV_DISABLE_PROMPT="1"
-source "/usr/local/bin/virtualenvwrapper.sh"
-
-alias mkenv='mkvirtualenv'
-alias mktmpenv='mktmpenv -n'
-alias rmenv='rmvirtualenv'
+# wrap current dir in a docker container with python interpreter
+alias dpython="docker run --interactive --tty --rm --mount src=$(pwd),target=/app,type=bind --workdir /app ${PYTHON_IMAGE} bash"
