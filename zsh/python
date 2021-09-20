@@ -1,0 +1,4 @@
+PYTHON_IMAGE="python:3.9.7-slim-buster"
+
+# wrap current dir in a docker container with python interpreter
+alias dpython="docker run --interactive --tty --rm --mount src=$(pwd),target=/app,type=bind --workdir /app ${PYTHON_IMAGE} bash"
