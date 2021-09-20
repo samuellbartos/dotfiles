@@ -17,6 +17,6 @@
 # artefacts from hypothesis package (property based testing)
 *.hypothesis
 # secrets related to the repo
-*.env
+*.env*
 # temporary stuff
 *tmp
