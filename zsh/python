@@ -1,5 +1,5 @@
 # home-brew-installed python 3
-export PATH="/usr/local/bin/python3:$PATH"
+export PATH="/usr/local/opt/python@3.9/libexec/bin:$PATH"
 
 # don't create .pyc files
 export PYTHONDONTWRITEBYTECODE="1"
