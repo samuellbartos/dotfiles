@@ -1,2 +1,2 @@
 version:
-	@cat .version
+	@cat VERSION
