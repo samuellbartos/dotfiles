@@ -1,2 +1,1 @@
 export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
-export GHC_COLORS='message=1:warning=1;32:error=1;31:fatal=1;31:margin=1;32'
