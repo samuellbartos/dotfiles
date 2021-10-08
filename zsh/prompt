@@ -1,8 +1,15 @@
+# setup git autocompletions
 autoload -Uz compinit && compinit
+
+# setup vcs info
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
+
+# prompt format
 PROMPT='%B%~ %F{yellow}$vcs_info_msg_0_%f%(?.%F{white}.%F{red})>%f%b '
+
+# vcs info styles
 zstyle ':vcs_info:git:*' formats '(%b) '
 zstyle ':vcs_info:git:*' actionformats '(%b|%a) '
