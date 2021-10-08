@@ -3,8 +3,7 @@ autoload -Uz compinit && compinit
 
 # setup vcs info
 autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
+precmd() { vcs_info }
 setopt prompt_subst
 
 # vcs info styles
