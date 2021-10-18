@@ -9,7 +9,9 @@ bindkey -e
 
 # aliases
 alias l='ls -lahFGT'
-alias less='less -FIRX'
 
 # ls colors
 export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
+
+# pager settings
+export LESS="--quit-if-one-screen --no-init --IGNORE-CASE --RAW-CONTROL-CHARS"
