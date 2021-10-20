@@ -14,4 +14,4 @@ alias l='ls -lahFGT'
 export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
 
 # pager settings
-export LESS="--quit-if-one-screen --no-init --IGNORE-CASE --RAW-CONTROL-CHARS"
+export LESS="--quit-if-one-screen --no-init --IGNORE-CASE --RAW-CONTROL-CHARS --tabs=4"
