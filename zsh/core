@@ -1,4 +1,4 @@
-# home-brew doctor recommeds
+# home-brew doctor recommends
 export PATH="/usr/local/sbin:$PATH"
 
 # defaut editor
