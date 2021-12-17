@@ -1,12 +1,5 @@
 # home-brew-installed python 3
-export PATH="/usr/local/bin/python3:$PATH"
+export PATH="/usr/local/opt/python@3.9/libexec/bin:$PATH"
 
 # don't create .pyc files
 export PYTHONDONTWRITEBYTECODE="1"
-
-# virtualenvwrapper setup
-export WORKON_HOME="$HOME/.virtualenvs"
-export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
-export VIRTUALENVWRAPPER_VIRTUALENV="/usr/local/bin/virtualenv"
-export VIRTUAL_ENV_DISABLE_PROMPT="1"
-source "/usr/local/bin/virtualenvwrapper.sh"

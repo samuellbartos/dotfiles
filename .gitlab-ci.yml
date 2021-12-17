@@ -1,5 +1,8 @@
 include:
-  - project: 'h8_s/cicd'
-    ref: '0.3.0'
-    file: '/autotag.yml'
+  - project: h8_s/cicd
+    ref: 0.7.0
+    file: /autotag.yml
 
+
+stages:
+  - tag

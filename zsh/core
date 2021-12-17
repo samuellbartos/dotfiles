@@ -1,10 +1,23 @@
-# home-brew doctor recommeds
+# home-brew doctor recommends
 export PATH="/usr/local/sbin:$PATH"
 
 # defaut editor
 export EDITOR='nvim'
 
+# emacs key bindings
+bindkey -e
+
 # aliases
 alias l='ls -lahFGT'
-alias less='less -FIRX'
 
+# ls colors
+export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
+
+# pager settings
+export LESS="--quit-if-one-screen --no-init --IGNORE-CASE --RAW-CONTROL-CHARS --tabs=4"
+
+# append every command to the history file once it is executed
+setopt inc_append_history
+
+# reload the history whenever used
+setopt share_history

@@ -1,0 +1,6 @@
+--colors=line:fg:white
+--colors=line:style:nobold
+--colors=path:fg:white
+--colors=path:style:bold
+--colors=match:fg:yellow
+--colors=match:style:nobold

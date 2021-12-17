@@ -14,7 +14,7 @@ call plug#end()
 " CORE
 
 " define colorscheme
-colorscheme dim
+colorscheme nord
 
 " vim-plug implicitly runs filetype indent on + syntax enable => disable unwanted auto-indent
 filetype indent off
@@ -43,6 +43,9 @@ set splitright
 " new window below the original after horizontal split
 set splitbelow
 
+" sync clipboard also (+) with the unnamed " register
+set clipboard+=unnamedplus
+
 " BINDINGS
 
 " clear in buffer search highlights
@@ -61,3 +64,6 @@ noremap! <up> <nop>
 noremap! <down> <nop>
 noremap! <left> <nop>
 noremap! <right> <nop>
+
+" print highlight group under cursor
+nnoremap zS :echo join(reverse(map(synstack(line('.'), col('.')), 'synIDattr(v:val,"name")')),' ')<cr>
