@@ -1,5 +1,11 @@
+# setup autocompletions
+autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump
+
 # home-brew doctor recommends
 export PATH="/usr/local/sbin:$PATH"
+
+# xdg compliance
+export PATH="$XDG_BIN_HOME:$PATH"
 
 # defaut editor
 export EDITOR='nvim'
@@ -15,6 +21,9 @@ export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
 
 # pager settings
 export LESS="--quit-if-one-screen --no-init --IGNORE-CASE --RAW-CONTROL-CHARS --tabs=4"
+
+# zsh history file location
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
 
 # append every command to the history file once it is executed
 setopt inc_append_history
