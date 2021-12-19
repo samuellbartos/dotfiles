@@ -46,6 +46,9 @@ set splitbelow
 " sync clipboard also (+) with the unnamed " register
 set clipboard+=unnamedplus
 
+" disable history files
+let netrw_dirhistmax = 0
+
 " BINDINGS
 
 " clear in buffer search highlights
