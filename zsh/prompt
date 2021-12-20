@@ -1,6 +1,3 @@
-# setup git autocompletions
-autoload -Uz compinit && compinit
-
 # setup vcs info
 autoload -Uz vcs_info
 precmd() { vcs_info }
