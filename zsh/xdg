@@ -1,1 +1,6 @@
-export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"  # ipython
+# ipython
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+
+# aws cli
+export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
+export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
