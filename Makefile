@@ -1,4 +1,4 @@
-.PHONY: version fzf rm-fzf
+.PHONY: version zsh-bootstrap rm-zsh-bootstrap fzf rm-fzf
 
 version:
 	@cat VERSION
@@ -11,3 +11,13 @@ rm-fzf:
 	$$(brew --prefix)/opt/fzf/uninstall --xdg
 	brew uninstall fzf
 	rm -r fzf
+
+zsh-bootstrap:
+	mkdir -p ${HOME}/.local/state/zsh
+	mkdir -p ${HOME}/.cache/zsh
+	ln -sf ${HOME}/.config/zsh/.zshenv ${HOME}/.zshenv
+
+rm-zsh-bootstrap:
+	rm -r ${HOME}/.local/state/zsh
+	rm -r ${HOME}/.cache/zsh
+	rm ${HOME}/.zshenv
