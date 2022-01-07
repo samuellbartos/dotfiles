@@ -1,5 +1,4 @@
-# setup autocompletions
-autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump
+# MISC
 
 # home-brew doctor recommends
 export PATH="/usr/local/sbin:$PATH"
@@ -10,23 +9,58 @@ export PATH="$XDG_BIN_HOME:$PATH"
 # defaut editor
 export EDITOR='nvim'
 
-# emacs key bindings
-bindkey -e
 
-# aliases
+# ALIASES
 alias l='ls -lahFGT'
 
-# ls colors
-export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
 
-# pager settings
+# PAGER SETTINGS
 export LESS="--quit-if-one-screen --no-init --IGNORE-CASE --RAW-CONTROL-CHARS --tabs=4"
+export LESSHISTFILE=-
 
+
+# HISTORY SETTING
 # zsh history file location
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 
-# append every command to the history file once it is executed
-setopt inc_append_history
+# append every command once it is executed
+setopt INC_APPEND_HISTORY
 
-# reload the history whenever used
-setopt share_history
+# reload history whenever used
+setopt SHARE_HISTORY
+
+# ignore command starting with space
+setopt HIST_IGNORE_SPACE
+
+# ignore command from history if it is identical to the previous one
+setopt HIST_IGNORE_DUPS
+
+# Do not display a previously found event.
+setopt HIST_FIND_NO_DUPS
+
+# do not write a duplicate event to the history file.
+setopt HIST_SAVE_NO_DUPS
+
+# delete an old recorded event if a new event is a duplicate.
+setopt HIST_IGNORE_ALL_DUPS
+
+
+# COMMAND LINE
+
+# setup autocompletions
+autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump
+
+# emacs key bindings
+bindkey -e
+
+# disable highlighting of pasted text
+zle_highlight=('paste:none')
+
+# edit command line
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
+
+# ls colors
+export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
