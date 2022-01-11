@@ -18,6 +18,7 @@ export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
 
 # pager settings
 export LESS="--quit-if-one-screen --no-init --IGNORE-CASE --RAW-CONTROL-CHARS --tabs=4"
+export LESSHISTFILE=-
 
 # zsh history file location
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
