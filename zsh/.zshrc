@@ -5,3 +5,6 @@
 [ -f "$XDG_CONFIG_HOME/zsh/python" ] && source "$XDG_CONFIG_HOME/zsh/python" # python
 [ -f "$XDG_CONFIG_HOME/zsh/xdg" ] && source "$XDG_CONFIG_HOME/zsh/xdg" # python
 [ -f "$HOME/.secrets" ] && source "$HOME/.secrets" # secret things
+
+# clean up PATH env var
+typeset -U path PATH  # PATH env var is somehow mirrored in path array, this makes both have unique values as recommended in docs
