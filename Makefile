@@ -21,3 +21,9 @@ rm-zsh-bootstrap:
 	rm -r ${HOME}/.local/state/zsh
 	rm -r ${HOME}/.cache/zsh
 	rm ${HOME}/.zshenv
+
+git:
+	brew install git
+
+rm-git:
+	brew uninstall git
