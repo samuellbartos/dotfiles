@@ -1,7 +1,13 @@
-.PHONY: version zsh-bootstrap rm-zsh-bootstrap fzf rm-fzf
+.PHONY: version alacritty rm-alacritty zsh-bootstrap rm-zsh-bootstrap fzf rm-fzf
 
 version:
 	@cat VERSION
+
+alacritty:
+	brew install --cask alacritty
+
+rm-alacritty:
+	brew uninstall --cask alacritty
 
 fzf:
 	brew install fzf
