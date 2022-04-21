@@ -33,3 +33,14 @@ git:
 
 rm-git:
 	brew uninstall git
+
+ghcup:
+	brew install ghcup
+	ghcup install ghc
+	ghcup set ghc recommended
+	ghcup install cabal
+	ghcup set cabal recommended
+
+rm-ghcup:
+	ghcup nuke
+	brew unistall ghcup
