@@ -19,6 +19,7 @@ rm-fzf:
 	rm -r fzf
 
 zsh-bootstrap:
+	mkdir -p ${HOME}/.local/bin
 	mkdir -p ${HOME}/.local/state/zsh
 	mkdir -p ${HOME}/.cache/zsh
 	ln -sf ${HOME}/.config/zsh/.zshenv ${HOME}/.zshenv
