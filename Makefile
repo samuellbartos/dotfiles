@@ -1,4 +1,4 @@
-.PHONY: version alacritty rm-alacritty zsh-bootstrap rm-zsh-bootstrap fzf rm-fzf
+.PHONY: version alacritty rm-alacritty zsh-bootstrap rm-zsh-bootstrap fzf rm-fzf git rm-git
 
 version:
 	@cat VERSION
