@@ -19,6 +19,7 @@ rm-fzf:
 	rm -r fzf
 
 zsh-bootstrap:
+	mkdir -p ${HOME}/.local/bin
 	mkdir -p ${HOME}/.local/state/zsh
 	mkdir -p ${HOME}/.cache/zsh
 	ln -sf ${HOME}/.config/zsh/.zshenv ${HOME}/.zshenv
@@ -33,3 +34,14 @@ git:
 
 rm-git:
 	brew uninstall git
+
+ghcup:
+	brew install ghcup
+	ghcup install ghc
+	ghcup set ghc recommended
+	ghcup install cabal
+	ghcup set cabal recommended
+
+rm-ghcup:
+	ghcup nuke
+	brew unistall ghcup

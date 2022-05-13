@@ -4,6 +4,9 @@ autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump
 # home-brew doctor recommends
 export PATH="/usr/local/sbin:$PATH"
 
+# xdg compliance
+export PATH="$XDG_BIN_HOME:$PATH"
+
 # defaut editor
 export EDITOR='nvim'
 
