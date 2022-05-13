@@ -70,6 +70,7 @@ alias grm='git reset --mixed'
 # git stash
 alias gsh='git stash'
 alias gshk='git stash --keep-index'
+alias gshs='git stash push --staged'
 alias gshp='git stash pop'
 alias gshd='git stash drop'
 alias gshswp='git stash show --pretty'
