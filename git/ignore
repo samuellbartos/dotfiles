@@ -20,3 +20,5 @@
 *.env*
 # temporary stuff
 *tmp
+# dir for cabal artifacts
+*dist-newstyle
