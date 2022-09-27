@@ -46,6 +46,13 @@ set splitbelow
 " sync clipboard also (+) with the unnamed " register
 set clipboard+=unnamedplus
 
+" show current line number
+set number
+
+" show relative line numbers
+set relativenumber
+
+
 " BINDINGS
 
 " clear in buffer search highlights
