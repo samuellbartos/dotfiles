@@ -46,6 +46,16 @@ set splitbelow
 " sync clipboard also (+) with the unnamed " register
 set clipboard+=unnamedplus
 
+" show current line number
+set number
+
+" show relative line numbers
+set relativenumber
+
+" no wrapping of long lines
+set nowrap
+
+
 " BINDINGS
 
 " clear in buffer search highlights
@@ -65,5 +75,10 @@ noremap! <down> <nop>
 noremap! <left> <nop>
 noremap! <right> <nop>
 
-" print highlight group under cursor
-nnoremap zS :echo join(reverse(map(synstack(line('.'), col('.')), 'synIDattr(v:val,"name")')),' ')<cr>
+" center cursor while scrolling
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" center cursor while searching
+nnoremap n nzzzv
+nnoremap N Nzzzv
