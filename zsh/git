@@ -57,6 +57,7 @@ alias gri='git rebase --interactive'
 alias gria='git rebase --interactive --autosquash'
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
+alias grix='git rebase --interactive --exec'
 alias grx='git rebase --exec'
 
 # git restore
