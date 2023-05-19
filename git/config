@@ -1,6 +1,6 @@
 [user]
     name = h8_s
-    email = h8_s@usa.com
+    email = h8_s@mail.com
 [core]
     editor = nvim
     pager = "less --tabs=1,5"
