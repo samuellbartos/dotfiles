@@ -8,6 +8,10 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " fuzzy find
 Plug 'junegunn/fzf.vim'
 
+" vimtex
+
+Plug 'lervag/vimtex'
+
 call plug#end()
 
 
