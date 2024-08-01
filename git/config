@@ -6,21 +6,15 @@
 [pull]
     ff = only
 [merge]
-    conflictstyle = diff3
-[log]
-    graphColors = blue
-[color "decorate"]
-    HEAD = bold yellow
-    branch = bold white
-    remoteBranch = bold white
-    tag = bold white
-    stash = bold yellow
-[diff "color"]
-    commit = white
-    frag = bold white
-[color "branch"]
-    current = bold yellow
-    local = white
-    upstream = white
-[color "interactive"]
-    prompt = bold white
+    conflictstyle = zdiff3
+[commit]
+    verbose = true
+[diff]
+    algorithm = histogram
+[branch]
+    sort = committerdate
+[fetch]
+    prune = true
+    pruneTags = true
+[help]
+    autocorrect = 10
