@@ -9,7 +9,18 @@
 [pull]
     ff = only
 [merge]
-    conflictstyle = diff3
+    conflictstyle = zdiff3
+[commit]
+    verbose = true
+[diff]
+    algorithm = histogram
+[branch]
+    sort = committerdate
+[fetch]
+    prune = true
+    pruneTags = true
+[help]
+    autocorrect = 10
 [includeIf "gitdir:~/work/open-bean/"]
     path = ~/work/open-bean/.gitconfig
 [log]

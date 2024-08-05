@@ -22,3 +22,5 @@
 *tmp
 # dir for cabal artifacts
 *dist-newstyle
+# pyspark
+*.parquet.crc
