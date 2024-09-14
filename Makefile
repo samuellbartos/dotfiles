@@ -37,8 +37,8 @@ rm-fzf:
 
 nvim:
 	brew install nvim
-	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	sh -c 'curl -fLo "${XDG_DATA_HOME}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 rm-nvim:
-	rm "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim
+	rm "${XDG_DATA_HOME}"/nvim/site/autoload/plug.vim
 	brew uninstall nvim
