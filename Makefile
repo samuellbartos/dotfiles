@@ -1,4 +1,4 @@
-.PHONY: version alacritty rm-alacritty zsh rm-zsh fzf rm-fzf
+.PHONY: version alacritty rm-alacritty zsh rm-zsh ripgrep rm-ripgrep fzf rm-fzf nvim rm-nvim
 
 version:
 	@cat VERSION
