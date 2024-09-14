@@ -31,3 +31,9 @@ setopt inc_append_history
 
 # reload the history whenever used
 setopt share_history
+
+# edit command line
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
