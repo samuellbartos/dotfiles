@@ -9,6 +9,17 @@ alacritty:
 rm-alacritty:
 	brew uninstall --cask alacritty
 
+zsh:
+	mkdir -p ${HOME}/.local/bin
+	mkdir -p ${HOME}/.local/state/zsh
+	mkdir -p ${HOME}/.cache/zsh
+	ln -sf ${HOME}/.config/zsh/.zshenv ${HOME}/.zshenv
+
+rm-zsh:
+	rm -r ${HOME}/.local/state/zsh
+	rm -r ${HOME}/.cache/zsh
+	rm ${HOME}/.zshenv
+
 ripgrep:
 	brew install ripgrep
 
@@ -23,17 +34,6 @@ rm-fzf:
 	$$(brew --prefix)/opt/fzf/uninstall --xdg
 	brew uninstall fzf
 	rm -r fzf
-
-zsh:
-	mkdir -p ${HOME}/.local/bin
-	mkdir -p ${HOME}/.local/state/zsh
-	mkdir -p ${HOME}/.cache/zsh
-	ln -sf ${HOME}/.config/zsh/.zshenv ${HOME}/.zshenv
-
-rm-zsh:
-	rm -r ${HOME}/.local/state/zsh
-	rm -r ${HOME}/.cache/zsh
-	rm ${HOME}/.zshenv
 
 nvim:
 	brew install nvim
