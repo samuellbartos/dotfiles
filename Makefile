@@ -35,6 +35,14 @@ rm-zsh-bootstrap:
 	rm -r ${HOME}/.cache/zsh
 	rm ${HOME}/.zshenv
 
+nvim:
+	brew install nvim
+	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+rm-nvim:
+	rm "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim
+	brew uninstall nvim
+
 git:
 	brew install git
 
