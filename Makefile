@@ -1,4 +1,4 @@
-.PHONY: version alacritty rm-alacritty zsh-bootstrap rm-zsh-bootstrap fzf rm-fzf git rm-git
+.PHONY: version alacritty rm-alacritty zsh rm-zsh ripgrep rm-ripgrep fzf rm-fzf nvim rm-nvim
 
 version:
 	@cat VERSION
@@ -8,6 +8,17 @@ alacritty:
 
 rm-alacritty:
 	brew uninstall --cask alacritty
+
+zsh:
+	mkdir -p ${HOME}/.local/bin
+	mkdir -p ${HOME}/.local/state/zsh
+	mkdir -p ${HOME}/.cache/zsh
+	ln -sf ${HOME}/.config/zsh/.zshenv ${HOME}/.zshenv
+
+rm-zsh:
+	rm -r ${HOME}/.local/state/zsh
+	rm -r ${HOME}/.cache/zsh
+	rm ${HOME}/.zshenv
 
 ripgrep:
 	brew install ripgrep
@@ -24,17 +35,6 @@ rm-fzf:
 	brew uninstall fzf
 	rm -r fzf
 
-zsh-bootstrap:
-	mkdir -p ${HOME}/.local/bin
-	mkdir -p ${HOME}/.local/state/zsh
-	mkdir -p ${HOME}/.cache/zsh
-	ln -sf ${HOME}/.config/zsh/.zshenv ${HOME}/.zshenv
-
-rm-zsh-bootstrap:
-	rm -r ${HOME}/.local/state/zsh
-	rm -r ${HOME}/.cache/zsh
-	rm ${HOME}/.zshenv
-
 nvim:
 	brew install nvim
 	sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -42,20 +42,3 @@ nvim:
 rm-nvim:
 	rm "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim
 	brew uninstall nvim
-
-git:
-	brew install git
-
-rm-git:
-	brew uninstall git
-
-ghcup:
-	brew install ghcup
-	ghcup install ghc
-	ghcup set ghc recommended
-	ghcup install cabal
-	ghcup set cabal recommended
-
-rm-ghcup:
-	ghcup nuke
-	brew unistall ghcup
