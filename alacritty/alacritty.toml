@@ -60,10 +60,6 @@ dynamic_padding = true
 startup_mode = "Maximized"
 title = "Alacritty"
 
-[window.dimensions]
-columns = 0
-lines = 0
-
 [window.padding]
 x = 6
 y = 4
