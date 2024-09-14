@@ -1,4 +1,4 @@
-.PHONY: version alacritty rm-alacritty zsh-bootstrap rm-zsh-bootstrap fzf rm-fzf git rm-git
+.PHONY: version alacritty rm-alacritty zsh-bootstrap rm-zsh-bootstrap fzf rm-fzf
 
 version:
 	@cat VERSION
@@ -42,20 +42,3 @@ nvim:
 rm-nvim:
 	rm "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim
 	brew uninstall nvim
-
-git:
-	brew install git
-
-rm-git:
-	brew uninstall git
-
-ghcup:
-	brew install ghcup
-	ghcup install ghc
-	ghcup set ghc recommended
-	ghcup install cabal
-	ghcup set cabal recommended
-
-rm-ghcup:
-	ghcup nuke
-	brew unistall ghcup
