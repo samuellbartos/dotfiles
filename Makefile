@@ -9,6 +9,12 @@ alacritty:
 rm-alacritty:
 	brew uninstall --cask alacritty
 
+ripgrep:
+	brew install ripgrep
+
+rm-ripgrep:
+	brew uninstall ripgrep
+
 fzf:
 	brew install fzf
 	$$(brew --prefix)/opt/fzf/install --xdg --no-fish --no-bash --key-bindings --completion --no-update-rc
