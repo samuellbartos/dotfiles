@@ -1,6 +1,3 @@
-[user]
-    name = h8_s
-    email = h8_s@mail.com
 [core]
     editor = nvim
     pager = "less --tabs=1,5"
@@ -21,8 +18,6 @@
     pruneTags = true
 [help]
     autocorrect = 10
-[includeIf "gitdir:~/work/open-bean/"]
-    path = ~/work/open-bean/.gitconfig
 [log]
     graphColors = blue
 [color "decorate"]
