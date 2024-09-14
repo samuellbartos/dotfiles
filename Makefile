@@ -1,4 +1,4 @@
-.PHONY: version alacritty rm-alacritty zsh-bootstrap rm-zsh-bootstrap fzf rm-fzf
+.PHONY: version alacritty rm-alacritty zsh rm-zsh fzf rm-fzf
 
 version:
 	@cat VERSION
@@ -24,13 +24,13 @@ rm-fzf:
 	brew uninstall fzf
 	rm -r fzf
 
-zsh-bootstrap:
+zsh:
 	mkdir -p ${HOME}/.local/bin
 	mkdir -p ${HOME}/.local/state/zsh
 	mkdir -p ${HOME}/.cache/zsh
 	ln -sf ${HOME}/.config/zsh/.zshenv ${HOME}/.zshenv
 
-rm-zsh-bootstrap:
+rm-zsh:
 	rm -r ${HOME}/.local/state/zsh
 	rm -r ${HOME}/.cache/zsh
 	rm ${HOME}/.zshenv
