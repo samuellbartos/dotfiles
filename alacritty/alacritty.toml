@@ -46,7 +46,7 @@ cursor = "#d8dee9"
 text = "#242933"
 
 [env]
-TERM = "xterm-256color"
+COLORTERM = ""
 
 [font]
 size = 15.0
