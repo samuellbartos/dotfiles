@@ -1,0 +1,19 @@
+name: merge
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: tag
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        V=$(make version)
+        git tag "$V"
+        git push origin "$V"
