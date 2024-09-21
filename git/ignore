@@ -24,3 +24,5 @@
 *dist-newstyle
 # pyspark
 *.parquet.crc
+# pip
+*pip
