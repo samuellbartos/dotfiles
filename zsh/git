@@ -88,4 +88,4 @@ alias gswp='git show --pretty="" --name-status'
 alias gt='git tag'
 
 # remove tracking branches deleted on remote
-alias gx="git fetch --prune && { git checkout master || git checkout main } && git pull && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"
+alias gx="git fetch && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"
