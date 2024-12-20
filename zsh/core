@@ -29,6 +29,9 @@ setopt inc_append_history
 # reload history whenever used
 setopt share_history
 
+# ignore command starting with space
+setops histignorespace
+
 
 # COMMAND LINE
 
