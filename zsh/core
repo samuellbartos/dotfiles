@@ -1,5 +1,4 @@
-# setup autocompletions
-autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump
+# MISC
 
 # home-brew doctor recommends
 export PATH="/usr/local/sbin:$PATH"
@@ -10,30 +9,40 @@ export PATH="$XDG_BIN_HOME:$PATH"
 # defaut editor
 export EDITOR='nvim'
 
-# emacs key bindings
-bindkey -e
 
-# aliases
+# ALIASES
 alias l='ls -lahFGT'
 
-# ls colors
-export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
 
-# pager settings
+# PAGER SETTINGS
 export LESS="--quit-if-one-screen --no-init --IGNORE-CASE --RAW-CONTROL-CHARS --tabs=4"
 export LESSHISTFILE=-
 
+
+# HISTORY SETTING
 # zsh history file location
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 
-# append every command to the history file once it is executed
+# append every command once it is executed
 setopt inc_append_history
 
-# reload the history whenever used
+# reload history whenever used
 setopt share_history
+
+
+# COMMAND LINE
+
+# setup autocompletions
+autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump
+
+# emacs key bindings
+bindkey -e
 
 # edit command line
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
+
+# ls colors
+export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
