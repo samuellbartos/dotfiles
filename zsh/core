@@ -32,6 +32,18 @@ setopt share_history
 # ignore command starting with space
 setops histignorespace
 
+# ignore command from history if it is identical to the previous one
+setops histignoredups
+
+# Do not display a previously found event.
+setopt histfindnodups
+
+# do not write a duplicate event to the history file.
+setopt histsavenodups
+
+# delete an old recorded event if a new event is a duplicate.
+setopt histignorealldups
+
 
 # COMMAND LINE
 
