@@ -24,25 +24,25 @@ export LESSHISTFILE=-
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 
 # append every command once it is executed
-setopt inc_append_history
+setopt INC_APPEND_HISTORY
 
 # reload history whenever used
-setopt share_history
+setopt SHARE_HISTORY
 
 # ignore command starting with space
-setops histignorespace
+setopt HIST_IGNORE_SPACE
 
 # ignore command from history if it is identical to the previous one
-setops histignoredups
+setopt HIST_IGNORE_DUPS
 
 # Do not display a previously found event.
-setopt histfindnodups
+setopt HIST_FIND_NO_DUPS
 
 # do not write a duplicate event to the history file.
-setopt histsavenodups
+setopt HIST_SAVE_NO_DUPS
 
 # delete an old recorded event if a new event is a duplicate.
-setopt histignorealldups
+setopt HIST_IGNORE_ALL_DUPS
 
 
 # COMMAND LINE
