@@ -60,6 +60,7 @@ decorations = "None"
 dynamic_padding = true
 startup_mode = "Maximized"
 title = "Alacritty"
+option_as_alt = "Both"
 
 [window.padding]
 x = 6
