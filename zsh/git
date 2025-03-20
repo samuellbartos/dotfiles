@@ -42,7 +42,7 @@ alias gf='git fetch'
 alias gfm='(git fetch origin master:master || git fetch && git pull --ff-only) 2> /dev/null'
 
 # git log
-alias gl='git log --all --oneline --graph --pretty="%C(auto)%h -%d %s %C(blue)(%cr) <%an>%Creset"'
+alias gl='git log --all --oneline --graph --pretty="%C(auto)%h -%d %s %C(blue)(%ci) <%an>%Creset"'
 
 # git pull
 alias gpl='git pull'
