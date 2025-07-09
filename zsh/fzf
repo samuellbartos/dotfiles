@@ -9,7 +9,5 @@ export FZF_DEFAULT_OPTS="
   --layout=reverse
   --bind ctrl-a:toggle-all
   --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (cat {}) 2> /dev/null'
-  --color fg:7,bg:0,hl:3,fg+:7,bg+:0,hl+:3
-  --color border:7,info:7,prompt:7,spinner:7,pointer:3,marker:3
 "
 export FZF_CTRL_R_OPTS="--preview-window='hidden'"
