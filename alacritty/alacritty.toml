@@ -1,6 +1,6 @@
 [general]
 live_config_reload = true
-import = ["~/.config/alacritty/themes/nord.toml"]
+import = ["themes/alacritty.toml"]
 
 [env]
 COLORTERM = ""
