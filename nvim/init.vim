@@ -16,9 +16,6 @@ call plug#end()
 
 " CORE
 
-" define colorscheme
-colorscheme nord
-
 " vim-plug implicitly runs filetype indent on + syntax enable => disable unwanted auto-indent
 filetype indent off
 
@@ -28,8 +25,14 @@ set encoding=utf-8
 " display whitespace chars
 set list lcs=trail:.,tab:>-
 
+" define colorscheme
+colorscheme ansi
+
 " highlight syntax
 syntax on
+
+" highlight the current line
+set cursorline
 
 " show line numbers
 set number
