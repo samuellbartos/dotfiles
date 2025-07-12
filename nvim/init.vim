@@ -9,7 +9,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " vimtex
-
 Plug 'lervag/vimtex'
 
 call plug#end()
