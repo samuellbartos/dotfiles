@@ -26,7 +26,7 @@ highlight TabLine ctermfg=7 ctermbg=0
 highlight TabLineFill ctermfg=0 ctermbg=NONE
 highlight TabLineSel ctermfg=0 ctermbg=11
 highlight Title ctermfg=4 cterm=bold
-highlight CursorLine ctermbg=8 ctermfg=NONE
+highlight CursorLine ctermbg=NONE ctermfg=NONE
 highlight Cursor ctermbg=15 ctermfg=0
 highlight CursorColumn ctermbg=0
 highlight LineNr ctermfg=8
@@ -84,7 +84,7 @@ highlight healthWarning ctermfg=3
 " syntax
 highlight Comment ctermfg=1 cterm=italic
 highlight Constant ctermfg=3
-highlight Error ctermfg=1
+highlight Error ctermbg=1
 highlight Identifier ctermfg=9
 highlight Function ctermfg=4
 highlight Special ctermfg=13
