@@ -26,7 +26,7 @@ set encoding=utf-8
 set list lcs=trail:.,tab:>-
 
 " define colorscheme
-colorscheme default
+colorscheme ansi
 
 " highlight syntax
 syntax on
