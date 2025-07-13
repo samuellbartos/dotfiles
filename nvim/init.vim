@@ -11,10 +11,16 @@ Plug 'junegunn/fzf.vim'
 " vimtex
 Plug 'lervag/vimtex'
 
+" hardtime
+Plug 'm4xshen/hardtime.nvim'
+
 call plug#end()
 
 
 " CORE
+
+" dependencies
+lua require("hardtime").setup()
 
 " vim-plug implicitly runs filetype indent on + syntax enable => disable unwanted auto-indent
 filetype indent off
