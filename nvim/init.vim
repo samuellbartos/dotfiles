@@ -84,3 +84,7 @@ noremap! <right> <nop>
 " center cursor while scrolling
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+
+" center cursor while searching
+nnoremap n nzzzv
+nnoremap N Nzzzv
