@@ -84,7 +84,7 @@ highlight healthWarning ctermfg=3
 " syntax
 highlight Comment ctermfg=1 cterm=italic
 highlight Constant ctermfg=3
-highlight Error ctermfg=1
+highlight Error ctermbg=1
 highlight Identifier ctermfg=9
 highlight Function ctermfg=4
 highlight Special ctermfg=13
