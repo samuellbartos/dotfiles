@@ -80,3 +80,7 @@ noremap! <up> <nop>
 noremap! <down> <nop>
 noremap! <left> <nop>
 noremap! <right> <nop>
+
+" center cursor while scrolling
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
