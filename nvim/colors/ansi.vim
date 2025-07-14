@@ -82,7 +82,7 @@ highlight healthSuccess ctermfg=2
 highlight healthWarning ctermfg=3
 
 " syntax
-highlight Comment ctermfg=1 cterm=italic
+highlight Comment ctermfg=8 cterm=italic
 highlight Constant ctermfg=3
 highlight Error ctermbg=1
 highlight Identifier ctermfg=9
