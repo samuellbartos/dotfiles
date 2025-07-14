@@ -1,0 +1,20 @@
+[core]
+    editor = nvim
+    pager = "less --tabs=1,5"
+[push]
+    default = current
+[pull]
+    ff = only
+[merge]
+    conflictstyle = zdiff3
+[commit]
+    verbose = true
+[diff]
+    algorithm = histogram
+[branch]
+    sort = committerdate
+[fetch]
+    prune = true
+    pruneTags = true
+[help]
+    autocorrect = 10

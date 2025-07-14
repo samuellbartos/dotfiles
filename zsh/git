@@ -42,7 +42,7 @@ alias gf='git fetch'
 alias gfm='(git fetch origin master:master || git fetch && git pull --ff-only) 2> /dev/null'
 
 # git log
-alias gl='git log --all --oneline --graph --pretty="%C(auto)%h -%d %s %C(blue)(%cr) <%an>%Creset"'
+alias gl='git log --all --oneline --graph --pretty="%C(auto)%h -%d %s %C(blue)(%ci) <%an>%Creset"'
 
 # git pull
 alias gpl='git pull'
@@ -57,6 +57,8 @@ alias gri='git rebase --interactive'
 alias gria='git rebase --interactive --autosquash'
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
+alias grix='git rebase --interactive --exec'
+alias grx='git rebase --exec'
 
 # git restore
 alias gr='git restore'
@@ -70,6 +72,7 @@ alias grm='git reset --mixed'
 # git stash
 alias gsh='git stash'
 alias gshk='git stash --keep-index'
+alias gshs='git stash push --staged'
 alias gshp='git stash pop'
 alias gshd='git stash drop'
 alias gshswp='git stash show --pretty'
@@ -85,4 +88,4 @@ alias gswp='git show --pretty="" --name-status'
 alias gt='git tag'
 
 # remove tracking branches deleted on remote
-alias gx="git fetch --prune && { git checkout master || git checkout main } && git pull && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"
+alias gx="git fetch && git remote show origin | sed -n '/HEAD branch/s/.*: //p' | xargs git checkout && git pull && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"

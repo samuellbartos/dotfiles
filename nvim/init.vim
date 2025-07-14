@@ -8,13 +8,19 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " fuzzy find
 Plug 'junegunn/fzf.vim'
 
+" vimtex
+Plug 'lervag/vimtex'
+
+" hardtime
+Plug 'm4xshen/hardtime.nvim'
+
 call plug#end()
 
 
 " CORE
 
-" define colorscheme
-colorscheme nord
+" dependencies
+lua require("hardtime").setup()
 
 " vim-plug implicitly runs filetype indent on + syntax enable => disable unwanted auto-indent
 filetype indent off
@@ -25,8 +31,14 @@ set encoding=utf-8
 " display whitespace chars
 set list lcs=trail:.,tab:>-
 
+" define colorscheme
+colorscheme ansi
+
 " highlight syntax
 syntax on
+
+" highlight the current line
+set cursorline
 
 " show line numbers
 set number
@@ -45,6 +57,16 @@ set splitbelow
 
 " sync clipboard also (+) with the unnamed " register
 set clipboard+=unnamedplus
+
+" show current line number
+set number
+
+" show relative line numbers
+set relativenumber
+
+" no wrapping of long lines
+set nowrap
+
 
 " BINDINGS
 
@@ -65,5 +87,10 @@ noremap! <down> <nop>
 noremap! <left> <nop>
 noremap! <right> <nop>
 
-" print highlight group under cursor
-nnoremap zS :echo join(reverse(map(synstack(line('.'), col('.')), 'synIDattr(v:val,"name")')),' ')<cr>
+" center cursor while scrolling
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" center cursor while searching
+nnoremap n nzzzv
+nnoremap N Nzzzv

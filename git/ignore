@@ -20,3 +20,9 @@
 *.env*
 # temporary stuff
 *tmp
+# dir for cabal artifacts
+*dist-newstyle
+# pyspark
+*.parquet.crc
+# pip
+*pip

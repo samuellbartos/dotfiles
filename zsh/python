@@ -1,5 +1,11 @@
+# ipython
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+
 # home-brew-installed python 3
 export PATH="/usr/local/opt/python@3.9/libexec/bin:$PATH"
 
 # don't create .pyc files
 export PYTHONDONTWRITEBYTECODE="1"
+
+# don't buffer stdout
+export PYTHONUNBUFFERED="1"
