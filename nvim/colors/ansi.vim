@@ -1,5 +1,6 @@
 let g:colors_name = 'ansi'
 
+syntax on
 highlight clear
 set background=dark
 set notermguicolors
