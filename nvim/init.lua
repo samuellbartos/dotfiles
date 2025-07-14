@@ -8,7 +8,7 @@ vim.call("plug#begin")
 Plug("junegunn/fzf", { ["do"] = function()
   vim.fn["fzf#install"]()
 end })
-Plug("junegunn/fzf.vim")
+Plug("ibhagwan/fzf-lua")
 
 Plug("lervag/vimtex")
 
@@ -19,6 +19,31 @@ vim.call("plug#end")
 
 -- DEPENDENCIES
 
+require("fzf-lua").setup({
+  defaults = {
+    git_icons = false,
+    file_icons = false,
+    fzf_colors = false,
+  },
+  winopts = {
+    row = 1,
+    col = 0,
+    width = 1,
+    height = 1,
+    border = {"", "_", "", "", "", "", "", ""},
+    preview = {
+      layout = "vertical",
+      vertical = "up:60%",
+      border = "none",
+    },
+    treesitter = {
+      enabled = false,
+    }
+  },
+  grep = {
+    RIPGREP_CONFIG_PATH = vim.env.RIPGREP_CONFIG_PATH,
+  }
+})
 require("hardtime").setup()
 
 
@@ -97,3 +122,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- center cursor while searching
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
+-- fzf
+vim.keymap.set("n", "<C-t>", ':lua require("fzf-lua").files()<CR>')
+vim.keymap.set("n", "<C-g>", ':lua require("fzf-lua").live_grep()<CR>')
