@@ -26,7 +26,7 @@ highlight TabLine ctermfg=7 ctermbg=0
 highlight TabLineFill ctermfg=0 ctermbg=NONE
 highlight TabLineSel ctermfg=0 ctermbg=11
 highlight Title ctermfg=4 cterm=bold
-highlight CursorLine ctermbg=8 ctermfg=NONE
+highlight CursorLine ctermbg=NONE ctermfg=NONE
 highlight Cursor ctermbg=15 ctermfg=0
 highlight CursorColumn ctermbg=0
 highlight LineNr ctermfg=8
