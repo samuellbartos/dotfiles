@@ -58,6 +58,9 @@ set number
 " show relative line numbers
 set relativenumber
 
+" no wrapping of long lines
+set nowrap
+
 
 " BINDINGS
 
