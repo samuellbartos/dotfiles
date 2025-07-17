@@ -104,7 +104,7 @@ vim.opt.shiftwidth = 2
 -- REMAPS
 
 -- clear in buffer search highlights
-vim.keymap.set("n", "<Esc><Esc>", ":noh<CR>")
+vim.keymap.set("n", "<Esc><Esc>", "<Cmd>noh<CR>")
 
 -- remap Leader key to spacebar
 vim.g.mapleader = "<Space>"
@@ -124,5 +124,5 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- fzf
-vim.keymap.set("n", "<C-t>", ':lua require("fzf-lua").files()<CR>')
-vim.keymap.set("n", "<C-g>", ':lua require("fzf-lua").live_grep()<CR>')
+vim.keymap.set("n", "<C-t>", '<Cmd>lua require("fzf-lua").files()<CR>')
+vim.keymap.set("n", "<C-g>", '<Cmd>lua require("fzf-lua").live_grep()<CR>')
