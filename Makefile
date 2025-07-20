@@ -1,4 +1,4 @@
-.PHONY: version alacritty rm-alacritty zsh rm-zsh ripgrep rm-ripgrep fzf rm-fzf nvim rm-nvim
+MAKEFLAGS += --always-make
 
 version:
 	@cat VERSION
@@ -28,17 +28,17 @@ rm-ripgrep:
 
 fzf:
 	brew install fzf
-	$$(brew --prefix)/opt/fzf/install --xdg --no-fish --no-bash --key-bindings --completion --no-update-rc
 
 rm-fzf:
-	$$(brew --prefix)/opt/fzf/uninstall --xdg
 	brew uninstall fzf
-	rm -r fzf
 
-nvim:
+xdg:
+	source ${HOME}/.zshenv
+
+nvim: xdg
 	brew install nvim
 	sh -c 'curl -fLo "${XDG_DATA_HOME}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-rm-nvim:
+rm-nvim: xdg
 	rm "${XDG_DATA_HOME}"/nvim/site/autoload/plug.vim
 	brew uninstall nvim
