@@ -24,7 +24,7 @@ local colors = {
 }
 
 -- core
-vim.api.nvim_set_hl(0, "NonText", {ctermfg=colors["black"]})
+vim.api.nvim_set_hl(0, "NonText", {ctermfg=colors["white"]})
 vim.api.nvim_set_hl(0, "Underlined", {underline=true})
 vim.api.nvim_set_hl(0, "Bold", {bold=true})
 vim.api.nvim_set_hl(0, "Italic", {italic=true})
