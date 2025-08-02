@@ -78,7 +78,7 @@ alias gshd='git stash drop'
 alias gshswp='git stash show --pretty'
 
 # git status
-alias gs='git status'
+alias gs='git status --short'
 
 # git show
 alias gsw='git show'
