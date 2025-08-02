@@ -35,7 +35,7 @@ alias gcpa='git cherry-pick --abort'
 
 # git diff
 alias gd='git diff'
-alias gdc='git diff --cached'
+alias gds='git diff --staged'
 
 # git fetch
 alias gf='git fetch'
@@ -79,10 +79,16 @@ alias gshswp='git stash show --pretty'
 
 # git status
 alias gs='git status'
+alias gss='git status --short'
 
 # git show
 alias gsw='git show'
 alias gswp='git show --pretty="" --name-status'
+
+# git switch
+alias gw='git switch'
+alias gwc='git switch -c'
+alias gwC='git switch -C'
 
 # git tag
 alias gt='git tag'
