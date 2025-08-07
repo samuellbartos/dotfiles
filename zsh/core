@@ -1,7 +1,11 @@
 # MISC
 
 # home-brew doctor recommends
-export PATH="/usr/local/sbin:$PATH"
+if [ -d "/opt/homebrew/bin" ] ; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -d "/usr/local/bin" ] ; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
 
 # xdg compliance
 export PATH="$XDG_BIN_HOME:$PATH"
@@ -12,6 +16,7 @@ export EDITOR='nvim'
 
 # ALIASES
 alias l='ls -lahFGT'
+alias tz='for i in $(seq 1 5); do time zsh -i -c exit; done'
 
 
 # PAGER SETTINGS
@@ -20,35 +25,26 @@ export LESSHISTFILE=-
 
 
 # HISTORY SETTING
-# zsh history file location
-export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export HISTFILE="$XDG_STATE_HOME"/zsh/history  # zsh history file location
 
-# append every command once it is executed
-setopt INC_APPEND_HISTORY
-
-# reload history whenever used
-setopt SHARE_HISTORY
-
-# ignore command starting with space
-setopt HIST_IGNORE_SPACE
-
-# ignore command from history if it is identical to the previous one
-setopt HIST_IGNORE_DUPS
-
-# Do not display a previously found event.
-setopt HIST_FIND_NO_DUPS
-
-# do not write a duplicate event to the history file.
-setopt HIST_SAVE_NO_DUPS
-
-# delete an old recorded event if a new event is a duplicate.
-setopt HIST_IGNORE_ALL_DUPS
+setopt inc_append_history  # append every command once it is executed
+setopt share_history  # reload history whenever used
+setopt hist_ignore_space  # ignore command starting with space
+setopt hist_ignore_dups  # ignore command from history if it is identical to the previous one
+setopt hist_find_no_dups  # Do not display a previously found event.
+setopt hist_save_no_dups  # do not write a duplicate event to the history file.
+setopt hist_ignore_all_dups  # delete an old recorded event if a new event is a duplicate.
 
 
 # COMMAND LINE
 
 # setup autocompletions
-autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump
+export ZCOMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
+autoload -Uz compinit
+# only run full compinit once per day
+[ ! "$(find $ZCOMPDUMP -mtime -1 2>/dev/null)" ] && compinit -d $ZCOMPDUMP || compinit -C -d $ZCOMPDUMP
+
+setopt no_auto_menu  # dont cycle between ambiguous completions
 
 # emacs key bindings
 bindkey -e
@@ -57,7 +53,7 @@ bindkey -e
 zle_highlight=('paste:none')
 
 # edit command line
-autoload -U edit-command-line
+autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
