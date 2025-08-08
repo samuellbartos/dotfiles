@@ -9,3 +9,9 @@ export PYTHONDONTWRITEBYTECODE="1"
 
 # don't buffer stdout
 export PYTHONUNBUFFERED="1"
+
+# python virtual env setup
+export VIRTUAL_ENV_DISABLE_PROMPT=1  # don't modify the prompt
+venv="$XDG_DATA_HOME/python/venv/default"
+[ ! -d "$venv" ] && python -m venv "$venv"
+source "$venv/bin/activate"
