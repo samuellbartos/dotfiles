@@ -49,7 +49,10 @@ setopt HIST_IGNORE_ALL_DUPS
 # COMMAND LINE
 
 # setup autocompletions
-autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump
+zcompdump="$XDG_CACHE_HOME/zsh/zcompdump"
+autoload -Uz compinit
+# only run full compinit once per day
+[ ! "$(find $zcompdump -mtime 1 2>/dev/null)" ] && compinit -d $zcompdump || compinit -C
 
 # emacs key bindings
 bindkey -e
