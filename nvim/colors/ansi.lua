@@ -115,3 +115,13 @@ vim.api.nvim_set_hl(0, "diffFile", {ctermfg=colors["white"], bold=true})
 vim.api.nvim_set_hl(0, "diffLine", {ctermfg=colors["cyan"]})
 vim.api.nvim_set_hl(0, "diffIndexLine", {ctermfg=colors["white"], bold=true})
 vim.api.nvim_set_hl(0, "diffSubname", {ctermfg=colors["white"], bold=true})
+
+-- gitcommit
+vim.api.nvim_set_hl(0, "gitcommitSelectedFile", {link="diffAdded"})
+vim.api.nvim_set_hl(0, "gitcommitSelectedType", {link="gitcommitSelectedFile"})
+vim.api.nvim_set_hl(0, "gitcommitDiscardedFile", {link="diffRemoved"})
+vim.api.nvim_set_hl(0, "gitcommitDiscardedType", {link="gitcommitDiscardedFile"})
+vim.api.nvim_set_hl(0, "gitcommitUntrackedFile", {link="diffRemoved"})
+vim.api.nvim_set_hl(0, "gitcommitBranch", {link="Comment"})
+vim.api.nvim_set_hl(0, "gitcommitHeader", {link="Comment"})
+vim.api.nvim_set_hl(0, "gitcommitSummary", {link="Normal"})
