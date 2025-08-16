@@ -13,6 +13,7 @@ export EDITOR='nvim'
 
 # ALIASES
 alias l='ls -lahFGT'
+alias tz='for i in $(seq 1 5); do time zsh -i -c exit; done'
 
 
 # PAGER SETTINGS
@@ -52,7 +53,7 @@ setopt HIST_IGNORE_ALL_DUPS
 zcompdump="$XDG_CACHE_HOME/zsh/zcompdump"
 autoload -Uz compinit
 # only run full compinit once per day
-[ ! "$(find $zcompdump -mtime 1 2>/dev/null)" ] && compinit -d $zcompdump || compinit -C
+[ ! "$(find $zcompdump -mtime 1 2>/dev/null)" ] && compinit -d $zcompdump || compinit -C -d $zcompdump
 
 # emacs key bindings
 bindkey -e
