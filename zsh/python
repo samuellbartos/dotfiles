@@ -1,17 +1,10 @@
-# ipython
-export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"  # ipython
+export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"  # home-brew-installed python 3
+export PYTHONDONTWRITEBYTECODE="1"  # don't create .pyc files
+export PYTHONUNBUFFERED="1"  # don't buffer stdout
 
-# home-brew-installed python 3
-export PATH="$(brew --prefix)/opt/python/libexec/bin:$PATH"
-
-# don't create .pyc files
-export PYTHONDONTWRITEBYTECODE="1"
-
-# don't buffer stdout
-export PYTHONUNBUFFERED="1"
-
-# python virtual env setup
+# VIRTUALENV
 export VIRTUAL_ENV_DISABLE_PROMPT=1  # don't modify the prompt
-venv="$XDG_DATA_HOME/python/venv/default"
-[ ! -d "$venv" ] && python -m venv "$venv"
-source "$venv/bin/activate"
+export VENV="$XDG_DATA_HOME/python/venv/default"  # venv location
+[ ! -d "$VENV" ] && python -m venv "$VENV"  # create if not exist
+source "$VENV/bin/activate"
