@@ -1,4 +1,4 @@
-.PHONY: version alacritty rm-alacritty zsh rm-zsh ripgrep rm-ripgrep fzf rm-fzf nvim rm-nvim
+MAKEFLAGS += --always-make
 
 version:
 	@cat VERSION
