@@ -1,8 +1,13 @@
 # MISC
 
 # home-brew doctor recommends
-[ -d "/usr/local/sbin" ] && export PATH="/usr/local/sbin:$PATH"
-[ -d "/opt/homebrew/bin" ] && export PATH="/opt/homebrew/bin:$PATH"
+if [ -d "/usr/local/sbin" ] ; then
+  export PATH="/usr/local/sbin:$PATH"
+  export BREW_PREFIX="/usr/local"
+elif [ -d "/opt/homebrew/bin" ] ; then
+  export PATH="/opt/homebrew/bin:$PATH"
+  export BREW_PREFIX="/opt/homebrew"
+fi
 
 # xdg compliance
 export PATH="$XDG_BIN_HOME:$PATH"
