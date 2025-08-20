@@ -85,6 +85,11 @@ alias gss='git status --short'
 alias gsw='git show'
 alias gswp='git show --pretty="" --name-status'
 
+# git switch
+alias gw='git switch'
+alias gwc='git switch -c'
+alias gwC='git switch -C'
+
 # git tag
 alias gt='git tag'
 
