@@ -41,7 +41,7 @@ setopt hist_ignore_all_dups  # delete an old recorded event if a new event is a 
 # COMMAND LINE
 
 # setup autocompletions
-ZCOMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
+export ZCOMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"
 autoload -Uz compinit
 # only run full compinit once per day
 [ ! "$(find $ZCOMPDUMP -mtime 1 2>/dev/null)" ] && compinit -d $ZCOMPDUMP || compinit -C -d $ZCOMPDUMP
