@@ -11,10 +11,12 @@ rm-alacritty:
 
 bash:
 	brew install bash
+	mkdir -p ${HOME}/.local/state/bash
 	ln -sf ${HOME}/.config/bash/.bashrc ${HOME}/.bash_profile
 
 rm-bash:
-	brew install bash
+	brew uninstall bash
+	rm -r ${HOME}/.local/state/bash
 	rm ${HOME}/.bash_profile
 
 ripgrep:
