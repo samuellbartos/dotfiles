@@ -3,95 +3,92 @@ alias l='ls -lahFGT'
 
 ## GIT
 
-# git
-alias g='git' && __git_complete g __git_main
-
 # git add
-alias ga='git add'
-alias gap='git add --patch'
-alias gau='git add --update'
-alias gapu='git add --patch --update'
+compalias ga='git add'
+compalias gap='git add --patch'
+compalias gau='git add --update'
+compalias gapu='git add --patch --update'
 
 # git branch
-alias gb='git branch' && __git_complete gb _git_branch
-alias gbf='git branch --force' && __git_complete gbf _git_branch
-alias gbm='git branch --move' && __git_complete gbm _git_branch
-alias gbd='git branch --delete' && __git_complete gbd _git_branch
-alias gbD='git branch --delete --force' && __git_complete gbD _git_branch
+compalias gb='git branch'
+compalias gbf='git branch --force'
+compalias gbm='git branch --move'
+compalias gbd='git branch --delete'
+compalias gbD='git branch --delete --force'
 
 # git commit
-alias gm='git commit'
-alias gmf='git commit --fixup'
-alias gma='git commit --amend'
-alias gmm='git commit --message'
+compalias gm='git commit'
+compalias gmf='git commit --fixup'
+compalias gma='git commit --amend'
+compalias gmm='git commit --message'
 
 # git checkout
-alias gc='git checkout' && __git_complete gc _git_checkout
-alias gcb='git checkout -b' && __git_complete gcB _git_complete_refs
-alias gcB='git checkout -B' && __git_complete gcB _git_complete_refs
+compalias gc='git checkout'
+compalias gcb='git checkout -b'
+compalias gcB='git checkout -B'
 
 
 # git cherry-pick
-alias gcp='git cherry-pick'
-alias gcpc='git cherry-pick --continue'
-alias gcpa='git cherry-pick --abort'
+compalias gcp='git cherry-pick'
+compalias gcpc='git cherry-pick --continue'
+compalias gcpa='git cherry-pick --abort'
 
 # git diff
-alias gd='git diff'
-alias gds='git diff --staged'
+compalias gd='git diff'
+compalias gds='git diff --staged'
 
 # git fetch
-alias gf='git fetch'
+compalias gf='git fetch'
 alias gfm='(git fetch origin master:master || git fetch && git pull --ff-only) 2> /dev/null'
 
 # git log
 alias gl='git log --all --oneline --graph --pretty="%C(auto)%h -%d %s %C(blue)(%ci) <%an>%Creset"'
 
 # git pull
-alias gpl='git pull'
+compalias gpl='git pull'
 
 # git push
-alias gp='git push'
-alias gpsu='git push --set-upstream'
-alias gpf='git push --force-with-lease'
+compalias gp='git push'
+compalias gpsu='git push --set-upstream'
+compalias gpf='git push --force-with-lease'
 
 # git rebase
-alias gri='git rebase --interactive'
-alias gria='git rebase --interactive --autosquash'
-alias grc='git rebase --continue'
-alias gra='git rebase --abort'
-alias grix='git rebase --interactive --exec'
-alias grx='git rebase --exec'
+compalias gri='git rebase --interactive'
+compalias gria='git rebase --interactive --autosquash'
+compalias grc='git rebase --continue'
+compalias gra='git rebase --abort'
+compalias grix='git rebase --interactive --exec'
+compalias grx='git rebase --exec'
 
 # git restore
-alias gr='git restore'
-alias grs='git restore --staged'
-alias grsw='git restore --staged --worktree'
+compalias gr='git restore'
+compalias grs='git restore --staged'
+compalias grsw='git restore --staged --worktree'
 
 # git reset
-alias grh='git reset --hard'
-alias grm='git reset --mixed'
+compalias grh='git reset --hard'
+compalias grm='git reset --mixed'
 
 # git stash
-alias gsh='git stash'
-alias gshk='git stash --keep-index'
-alias gshs='git stash push --staged'
-alias gshp='git stash pop'
-alias gshd='git stash drop'
-alias gshswp='git stash show --pretty'
+compalias gsh='git stash'
+compalias gshk='git stash --keep-index'
+compalias gshs='git stash push --staged'
+compalias gshp='git stash pop'
+compalias gshd='git stash drop'
+compalias gshswp='git stash show --pretty'
 
 # git status
 alias gs='git status'
 alias gss='git status --short'
 
 # git show
-alias gsw='git show'
-alias gswp='git show --pretty="" --name-status'
+compalias gsw='git show'
+compalias gswp='git show --pretty="" --name-status'
 
 # git switch
-alias gw='git switch'
-alias gwc='git switch -c'
-alias gwC='git switch -C'
+compalias gw='git switch'
+compalias gwc='git switch -c'
+compalias gwC='git switch -C'
 
 # git tag
 alias gt='git tag'

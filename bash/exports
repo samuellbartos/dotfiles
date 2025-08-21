@@ -49,3 +49,5 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 
 # bash completions
 [[ -r "$BREW_PREFIX/etc/bash_completion.d/git-completion.bash" ]] && source "$BREW_PREFIX/etc/bash_completion.d/git-completion.bash"
+[[ -r "$XDG_CONFIG_HOME/bash/complete_alias" ]] && source "$XDG_CONFIG_HOME/bash/complete_alias"
+
