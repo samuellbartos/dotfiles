@@ -38,7 +38,7 @@ export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
 
-# VIRTUALENV
+# python virtualenv
 export VIRTUAL_ENV_DISABLE_PROMPT=1  # don't modify the prompt
 export VENV="$XDG_DATA_HOME/python/venv/default"  # venv location
 [ ! -d "$VENV" ] && "$BREW_PREFIX/opt/python/libexec/bin/python" -m venv "$VENV"  # create using brew python
@@ -46,3 +46,6 @@ source "$VENV/bin/activate"
 
 # ipython
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+
+# bash completions
+[[ -r "$BREW_PREFIX/etc/bash_completion.d/git-completion.bash" ]] && source "$BREW_PREFIX/etc/bash_completion.d/git-completion.bash"

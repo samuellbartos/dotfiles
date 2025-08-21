@@ -4,7 +4,7 @@ alias l='ls -lahFGT'
 ## GIT
 
 # git
-alias g='git'
+alias g='git' && __git_complete g __git_main
 
 # git add
 alias ga='git add'
@@ -13,11 +13,11 @@ alias gau='git add --update'
 alias gapu='git add --patch --update'
 
 # git branch
-alias gb='git branch'
-alias gbf='git branch --force'
-alias gbm='git branch --move'
-alias gbd='git branch --delete'
-alias gbD='git branch --delete --force'
+alias gb='git branch' && __git_complete gb _git_branch
+alias gbf='git branch --force' && __git_complete gbf _git_branch
+alias gbm='git branch --move' && __git_complete gbm _git_branch
+alias gbd='git branch --delete' && __git_complete gbd _git_branch
+alias gbD='git branch --delete --force' && __git_complete gbD _git_branch
 
 # git commit
 alias gm='git commit'
@@ -26,9 +26,10 @@ alias gma='git commit --amend'
 alias gmm='git commit --message'
 
 # git checkout
-alias gc='git checkout'
-alias gcb='git checkout -b'
-alias gcB='git checkout -B'
+alias gc='git checkout' && __git_complete gc _git_checkout
+alias gcb='git checkout -b' && __git_complete gcB _git_complete_refs
+alias gcB='git checkout -B' && __git_complete gcB _git_complete_refs
+
 
 # git cherry-pick
 alias gcp='git cherry-pick'
