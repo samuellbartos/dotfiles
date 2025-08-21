@@ -1,0 +1,8 @@
+[[ -r "$BREW_PREFIX/etc/profile.d/bash_completion.sh" ]] && source "$BREW_PREFIX/etc/profile.d/bash_completion.sh"
+
+git_branch() {
+  branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+  if [ -n "$branch" ]; then
+    echo "($branch) "
+  fi
+}

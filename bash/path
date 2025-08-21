@@ -1,0 +1,9 @@
+# xdg compliance
+export PATH="$XDG_BIN_HOME:$PATH"
+
+# home-brew doctor recommends
+if [ -d "/usr/local/bin" ] ; then
+  export PATH="/usr/local/bin:$PATH"
+elif [ -d "/opt/homebrew/bin" ] ; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
