@@ -9,16 +9,15 @@ alacritty:
 rm-alacritty:
 	brew uninstall --cask alacritty
 
-zsh:
-	mkdir -p ${HOME}/.local/bin
-	mkdir -p ${HOME}/.local/state/zsh
-	mkdir -p ${HOME}/.cache/zsh
-	ln -sf ${HOME}/.config/zsh/.zshenv ${HOME}/.zshenv
+bash:
+	brew install bash
+	mkdir -p ${HOME}/.local/state/bash
+	ln -sf ${HOME}/.config/bash/.bashrc ${HOME}/.bash_profile
 
-rm-zsh:
-	rm -r ${HOME}/.local/state/zsh
-	rm -r ${HOME}/.cache/zsh
-	rm ${HOME}/.zshenv
+rm-bash:
+	brew uninstall bash
+	rm -r ${HOME}/.local/state/bash
+	rm ${HOME}/.bash_profile
 
 ripgrep:
 	brew install ripgrep

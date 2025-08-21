@@ -1,0 +1,2 @@
+export PROMPT_COMMAND='xc=${?##0}'  # get the exit code first so its not overwriten
+export PS1='\[\e[1m\]\w \[\e[34m\]$(git_branch)\[\e[39m\]$(echo ${xc:+\[\e[31m\]})>\[\e[0m\] '

@@ -4,6 +4,8 @@ import = ["themes/alacritty.toml"]
 
 [env]
 COLORTERM = ""
+SHELL = "/usr/local/bin/bash"
+BASH_SILENCE_DEPRECATION_WARNING="1"
 
 [font]
 size = 15.0

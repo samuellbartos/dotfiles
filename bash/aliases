@@ -1,0 +1,97 @@
+# CORE
+alias l='ls -lahFGT'
+
+## GIT
+
+# git add
+compalias ga='git add'
+compalias gap='git add --patch'
+compalias gau='git add --update'
+compalias gapu='git add --patch --update'
+
+# git branch
+compalias gb='git branch'
+compalias gbf='git branch --force'
+compalias gbm='git branch --move'
+compalias gbd='git branch --delete'
+compalias gbD='git branch --delete --force'
+
+# git commit
+compalias gm='git commit'
+compalias gmf='git commit --fixup'
+compalias gma='git commit --amend'
+compalias gmm='git commit --message'
+
+# git checkout
+compalias gc='git checkout'
+compalias gcb='git checkout -b'
+compalias gcB='git checkout -B'
+
+
+# git cherry-pick
+compalias gcp='git cherry-pick'
+compalias gcpc='git cherry-pick --continue'
+compalias gcpa='git cherry-pick --abort'
+
+# git diff
+compalias gd='git diff'
+compalias gds='git diff --staged'
+
+# git fetch
+compalias gf='git fetch'
+alias gfm='(git fetch origin master:master || git fetch && git pull --ff-only) 2> /dev/null'
+
+# git log
+alias gl='git log --all --oneline --graph --pretty="%C(auto)%h -%d %s %C(blue)(%ci) <%an>%Creset"'
+
+# git pull
+compalias gpl='git pull'
+
+# git push
+compalias gp='git push'
+compalias gpsu='git push --set-upstream'
+compalias gpf='git push --force-with-lease'
+
+# git rebase
+compalias gri='git rebase --interactive'
+compalias gria='git rebase --interactive --autosquash'
+compalias grc='git rebase --continue'
+compalias gra='git rebase --abort'
+compalias grix='git rebase --interactive --exec'
+compalias grx='git rebase --exec'
+
+# git restore
+compalias gr='git restore'
+compalias grs='git restore --staged'
+compalias grsw='git restore --staged --worktree'
+
+# git reset
+compalias grh='git reset --hard'
+compalias grm='git reset --mixed'
+
+# git stash
+compalias gsh='git stash'
+compalias gshk='git stash --keep-index'
+compalias gshs='git stash push --staged'
+compalias gshp='git stash pop'
+compalias gshd='git stash drop'
+compalias gshswp='git stash show --pretty'
+
+# git status
+alias gs='git status'
+alias gss='git status --short'
+
+# git show
+compalias gsw='git show'
+compalias gswp='git show --pretty="" --name-status'
+
+# git switch
+compalias gw='git switch'
+compalias gwc='git switch -c'
+compalias gwC='git switch -C'
+
+# git tag
+alias gt='git tag'
+
+# remove tracking branches deleted on remote
+alias gx="git fetch && git remote show origin | sed -n '/HEAD branch/s/.*: //p' | xargs git checkout && git pull && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"
