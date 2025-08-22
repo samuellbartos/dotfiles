@@ -19,7 +19,7 @@ elif [ -d "/opt/homebrew/bin" ] ; then
 fi
 
 # ripgrep
-export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/rg/config"
+# export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/rg/config"
 
 # fzf
 eval "$(fzf --bash)"
@@ -51,4 +51,4 @@ export GHCUP_USE_XDG_DIRS=1
 export CABAL_CONFIG="$XDG_CONFIG_HOME/cabal/config"
 
 # bash completions
-[[ -r "$BREW_PREFIX/etc/bash_completion.d/git-completion.bash" ]] && source "$BREW_PREFIX/etc/bash_completion.d/git-completion.bash"
+# [[ -r "$BREW_PREFIX/etc/bash_completion.d/git-completion.bash" ]] && source "$BREW_PREFIX/etc/bash_completion.d/git-completion.bash"
