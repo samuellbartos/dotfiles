@@ -44,6 +44,8 @@ autoload -Uz compinit
 # only run full compinit once per day
 [ ! "$(find $ZCOMPDUMP -mtime -1 2>/dev/null)" ] && compinit -d $ZCOMPDUMP || compinit -C -d $ZCOMPDUMP
 
+setopt no_auto_menu  # dont cycle between ambiguous completions
+
 # emacs key bindings
 bindkey -e
 
