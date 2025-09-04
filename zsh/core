@@ -2,11 +2,9 @@
 
 # home-brew doctor recommends
 if [ -d "/usr/local/sbin" ] ; then
-  export PATH="/usr/local/sbin:$PATH"
-  export BREW_PREFIX="/usr/local"
+  eval "$(/usr/local/sbin/brew shellenv)"
 elif [ -d "/opt/homebrew/bin" ] ; then
-  export PATH="/opt/homebrew/bin:$PATH"
-  export BREW_PREFIX="/opt/homebrew"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # xdg compliance
