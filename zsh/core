@@ -1,8 +1,8 @@
 # MISC
 
 # home-brew doctor recommends
-if [ -d "/usr/local/sbin" ] ; then
-  eval "$(/usr/local/sbin/brew shellenv)"
+if [ -d "/usr/local/bin" ] ; then
+  eval "$(/usr/local/bin/brew shellenv)"
 elif [ -d "/opt/homebrew/bin" ] ; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
