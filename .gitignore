@@ -3,6 +3,8 @@ ipython
 aws
 fzf/fzf.zsh
 kube
-zsh/wip
+zsh/extras
 cabal
 gh
+tmux/sessions
+git/config-extra
