@@ -1,0 +1,20 @@
+name: rebase-check
+
+on:
+  pull_request
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  rebase-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+    - run: git diff --quiet HEAD^2

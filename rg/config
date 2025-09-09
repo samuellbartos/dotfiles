@@ -1,3 +1,5 @@
+--column
+--line-number
 --colors=line:fg:white
 --colors=line:style:nobold
 --colors=path:fg:white
