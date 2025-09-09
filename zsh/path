@@ -1,0 +1,12 @@
+# home-brew doctor recommends
+if [ -d "/opt/homebrew/bin" ] ; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -d "/usr/local/bin" ] ; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+# xdg compliance
+export PATH="$XDG_BIN_HOME:$PATH"
+
+# clean up PATH env var
+typeset -U path PATH  # PATH env var is somehow mirrored in path array, this makes both have unique values as recommended in docs
