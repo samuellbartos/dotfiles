@@ -8,4 +8,4 @@ zstyle ':vcs_info:git:*' formats '(%b) '
 zstyle ':vcs_info:git:*' actionformats '(%b|%a) '
 
 # prompt format
-PROMPT='%B%~ %F{yellow}$vcs_info_msg_0_%f%(?.%F{white}.%F{red})>%f%b '
+export PROMPT='%B%~ %F{yellow}$vcs_info_msg_0_%f%(?.%F{white}.%F{red})>%f%b '

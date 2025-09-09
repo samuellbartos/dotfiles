@@ -1,5 +1,0 @@
-source <(fzf --zsh)
-
-export FZF_DEFAULT_OPTS_FILE="$XDG_CONFIG_HOME/fzf/config"
-export FZF_DEFAULT_COMMAND='rg --files --hidden --glob \!.git'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
