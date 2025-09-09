@@ -6,4 +6,4 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_BIN_HOME="$HOME/.local/bin"
 
 # zsh bootstrapping
-ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh

@@ -1,9 +1,0 @@
-export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"  # ipython
-export PYTHONDONTWRITEBYTECODE="1"  # don't create .pyc files
-export PYTHONUNBUFFERED="1"  # don't buffer stdout
-
-# VIRTUALENV
-export VIRTUAL_ENV_DISABLE_PROMPT=1  # don't modify the prompt
-export VENV="$XDG_DATA_HOME/python/venv/default"  # venv location
-[ ! -d "$VENV" ] && $HOMEBREW_PREFIX/opt/python/libexec/bin/python -m venv "$VENV"  # create using brew python
-source "$VENV/bin/activate"

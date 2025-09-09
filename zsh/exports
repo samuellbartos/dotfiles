@@ -1,0 +1,40 @@
+# EDITOR
+export EDITOR='nvim'
+
+# PAGER
+export LESS="--quit-if-one-screen --no-init --IGNORE-CASE --RAW-CONTROL-CHARS --tabs=4"
+export LESSHISTFILE=-
+
+# HISTORY
+export HISTFILE="$XDG_STATE_HOME"/zsh/history  # zsh history file location
+
+# LS
+export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
+
+# RIPGREP
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/rg/config"
+
+# FZF
+source <(fzf --zsh)
+export FZF_DEFAULT_OPTS_FILE="$XDG_CONFIG_HOME/fzf/config"
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob \!.git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# PYTHON
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"  # ipython
+export PYTHONDONTWRITEBYTECODE="1"  # don't create .pyc files
+export PYTHONUNBUFFERED="1"  # don't buffer stdout
+
+# PYTHON VIRTUALENV
+export VIRTUAL_ENV_DISABLE_PROMPT=1  # don't modify the prompt
+export VENV="$XDG_DATA_HOME/python/venv/default"  # venv location
+[ ! -d "$VENV" ] && $HOMEBREW_PREFIX/opt/python/libexec/bin/python -m venv "$VENV"  # create using brew python
+source "$VENV/bin/activate"
+
+# HASKELL
+export GHCUP_USE_XDG_DIRS=1  # ghcup
+export CABAL_CONFIG="$XDG_CONFIG_HOME/cabal/config"  # cabal
+#
+# AWS
+export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME/aws/credentials"
+export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
