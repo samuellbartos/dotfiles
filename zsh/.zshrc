@@ -1,13 +1,32 @@
-# load plugins
-[ -f "$XDG_CONFIG_HOME/zsh/core" ] && source "$XDG_CONFIG_HOME/zsh/core" # core settings
-[ -f "$XDG_CONFIG_HOME/zsh/prompt" ] && source "$XDG_CONFIG_HOME/zsh/prompt" # prompt
-[ -f "$XDG_CONFIG_HOME/zsh/git" ] && source "$XDG_CONFIG_HOME/zsh/git" # git
-[ -f "$XDG_CONFIG_HOME/zsh/rg" ] && source "$XDG_CONFIG_HOME/zsh/rg" # rg
-[ -f "$XDG_CONFIG_HOME/zsh/fzf" ] && source "$XDG_CONFIG_HOME/zsh/fzf" # fzf
-[ -f "$XDG_CONFIG_HOME/zsh/aws" ] && source "$XDG_CONFIG_HOME/zsh/aws" # aws
-[ -f "$XDG_CONFIG_HOME/zsh/python" ] && source "$XDG_CONFIG_HOME/zsh/python" # python
-[ -f "$XDG_CONFIG_HOME/zsh/haskell" ] && source "$XDG_CONFIG_HOME/zsh/haskell" # haskell
-[ -f "$XDG_CONFIG_HOME/zsh/wip" ] && source "$XDG_CONFIG_HOME/zsh/wip" # WIP
+# HISTORY
+setopt inc_append_history  # append every command once it is executed
+setopt share_history  # reload history whenever used
+setopt hist_ignore_space  # ignore command starting with space
+setopt hist_ignore_dups  # ignore command from history if it is identical to the previous one
+setopt hist_find_no_dups  # Do not display a previously found event.
+setopt hist_save_no_dups  # do not write a duplicate event to the history file.
+setopt hist_ignore_all_dups  # delete an old recorded event if a new event is a duplicate.
 
-# clean up PATH env var
-typeset -U path PATH  # PATH env var is somehow mirrored in path array, this makes both have unique values as recommended in docs
+# AUTOCOMPLETIONS
+zcompdump="$XDG_CACHE_HOME/zsh/zcompdump"
+autoload -Uz compinit
+# only run full compinit once per day
+[ ! "$(find $zcompdump -mtime -1 2>/dev/null)" ] && compinit -d $zcompdump || compinit -C -d $zcompdump
+
+setopt no_auto_menu  # dont cycle between ambiguous completions
+bindkey -e  # emacs key bindings
+zle_highlight=('paste:none')  # disable highlighting of pasted text
+
+# edit command line
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
+
+# MODULES
+[ -f "$XDG_CONFIG_HOME/zsh/path" ] && source "$XDG_CONFIG_HOME/zsh/path"
+[ -f "$XDG_CONFIG_HOME/zsh/aliases" ] && source "$XDG_CONFIG_HOME/zsh/aliases"
+[ -f "$XDG_CONFIG_HOME/zsh/functions" ] && source "$XDG_CONFIG_HOME/zsh/functions"
+[ -f "$XDG_CONFIG_HOME/zsh/prompt" ] && source "$XDG_CONFIG_HOME/zsh/prompt"
+[ -f "$XDG_CONFIG_HOME/zsh/exports" ] && source "$XDG_CONFIG_HOME/zsh/exports"
+[ -f "$XDG_CONFIG_HOME/zsh/extras" ] && source "$XDG_CONFIG_HOME/zsh/extras"

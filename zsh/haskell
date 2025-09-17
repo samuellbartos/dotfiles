@@ -1,5 +1,0 @@
-# ghcup
-export GHCUP_USE_XDG_DIRS=1
-
-# cabal
-export CABAL_CONFIG="$XDG_CONFIG_HOME/cabal/config"
