@@ -2,7 +2,9 @@
     editor = nvim
     pager = "less --tabs=1,5"
 [push]
-    default = current
+    default = simple
+    autoSetupRemote = true
+    followTags = true
 [pull]
     ff = only
 [merge]
@@ -11,10 +13,28 @@
     verbose = true
 [diff]
     algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
 [branch]
-    sort = committerdate
+    sort = -committerdate
+[color.diff]
+    oldMoved = magenta
+    newMoved = cyan
 [fetch]
     prune = true
     pruneTags = true
+    all = true
 [help]
-    autocorrect = 10
+    autocorrect = prompt
+[column]
+    ui = auto
+[tag]
+    sort = version:refname
+[rerere]
+    enabled = true
+    autoupdate = true
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
