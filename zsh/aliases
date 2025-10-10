@@ -45,26 +45,21 @@ alias gds='git diff --staged'
 
 # git fetch
 alias gf='git fetch'
-alias gfm='(git fetch origin master:master || git fetch && git pull --ff-only) 2> /dev/null'
 
 # git log
 alias gl='git log --all --oneline --graph --pretty="%C(auto)%h -%d %s %C(blue)(%ci) <%an>%Creset"'
 
-# git pull
-alias gpl='git pull'
-
 # git push
 alias gp='git push'
-alias gpsu='git push --set-upstream'
 alias gpf='git push --force-with-lease'
 
 # git rebase
-alias gri='git rebase --interactive'
-alias gria='git rebase --interactive --autosquash'
+alias gri='git rebase --committer-date-is-author-date --interactive'
+alias gria='git rebase --committer-date-is-author-date --interactive --autosquash'
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
-alias grix='git rebase --interactive --exec'
-alias grx='git rebase --exec'
+alias grix='git rebase --committer-date-is-author-date --interactive --exec'
+alias grx='git rebase --committer-date-is-author-date --exec'
 
 # git restore
 alias gr='git restore'
@@ -99,5 +94,5 @@ alias gwC='git switch -C'
 # git tag
 alias gt='git tag'
 
-# remove tracking branches deleted on remote
-alias gx="git fetch && git remote show origin | sed -n '/HEAD branch/s/.*: //p' | xargs git checkout && git pull && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"
+# prune orphaned local branches
+alias gx="git for-each-ref refs/heads --format '%(refname:short) %(upstream:track,nobracket)' | awk '/ gone/{print \$1}' | xargs git branch --delete --force"
