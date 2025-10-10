@@ -55,16 +55,15 @@ alias gpl='git pull'
 
 # git push
 alias gp='git push'
-alias gpsu='git push --set-upstream'
 alias gpf='git push --force-with-lease'
 
 # git rebase
-alias gri='git rebase --interactive'
-alias gria='git rebase --interactive --autosquash'
+alias gri='git rebase --committer-date-is-author-date --interactive'
+alias gria='git rebase --committer-date-is-author-date --interactive --autosquash'
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
-alias grix='git rebase --interactive --exec'
-alias grx='git rebase --exec'
+alias grix='git rebase --committer-date-is-author-date --interactive --exec'
+alias grx='git rebase --committer-date-is-author-date --exec'
 
 # git restore
 alias gr='git restore'
