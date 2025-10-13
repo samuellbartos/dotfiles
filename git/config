@@ -1,40 +1,40 @@
-[core]
-    editor = nvim
-    pager = "less --tabs=1,5"
-[push]
-    default = simple
-    autoSetupRemote = true
-    followTags = true
-[pull]
-    ff = only
-[merge]
-    conflictstyle = zdiff3
-[commit]
-    verbose = true
-[diff]
-    algorithm = histogram
-    colorMoved = plain
-    mnemonicPrefix = true
-    renames = true
 [branch]
     sort = -committerdate
 [color.diff]
     oldMoved = magenta
     newMoved = cyan
+[column]
+    ui = auto
+[commit]
+    verbose = true
+[core]
+    editor = nvim
+    pager = "less --tabs=1,5"
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
 [fetch]
     prune = true
     pruneTags = true
     all = true
 [help]
     autocorrect = prompt
-[column]
-    ui = auto
+[merge]
+    conflictstyle = zdiff3
+[pull]
+    ff = only
+[push]
+    default = simple
+    autoSetupRemote = true
+    followTags = true
 [tag]
     sort = version:refname
-[rerere]
-    enabled = true
-    autoupdate = true
 [rebase]
     autoSquash = true
     autoStash = true
     updateRefs = true
+[rerere]
+    enabled = true
+    autoupdate = true
