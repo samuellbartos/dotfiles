@@ -7,6 +7,9 @@ export LESSHISTFILE=-
 
 # HISTORY
 export HISTFILE="$XDG_STATE_HOME"/zsh/history  # zsh history file location
+export HISTORY_IGNORE='(l|l *|cd|cd *|cp *|mv *|nvim|nvim *|man *|pwd|exit)'
+export SAVEHIST=1000000
+export HISTSIZE=1000000
 
 # LS
 export LSCOLORS=exdxxxxxbxbxxxxxxxxxxx
