@@ -24,10 +24,10 @@ alias gbd='git branch --delete'
 alias gbD='git branch --delete --force'
 
 # git commit
-alias gm='git commit'
-alias gmf='git commit --fixup'
-alias gma='git commit --amend'
-alias gmm='git commit --message'
+alias gm='TZ=UTC git commit'
+alias gmf='TZ=UTC git commit --fixup'
+alias gma='TZ=UTC git commit --amend'
+alias gmm='TZ=UTC git commit --message'
 
 # git checkout
 alias gc='git checkout'
