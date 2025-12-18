@@ -3,6 +3,9 @@ MAKEFLAGS += --always-make
 version:
 	@cat VERSION
 
+hook:
+	git config --local core.hooksPath .githooks
+
 alacritty:
 	brew install --cask alacritty
 
