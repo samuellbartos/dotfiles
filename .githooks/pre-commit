@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+my_email() {
+    IFS="<>" read -r _ email __ < <(git var "$1")
+    [ "$email" = "$(git config get user.email)" ]
+}
+
+is_utc() {
+    IFS="<>" read -r _ __ dt < <(git var "$1")
+    [ "${dt:0-5}" = "+0000" ]
+}
+
+(! my_email GIT_AUTHOR_IDENT) || is_utc GIT_AUTHOR_IDENT
+(! my_email GIT_COMMITTER_IDENT) || is_utc GIT_COMMITTER_IDENT
