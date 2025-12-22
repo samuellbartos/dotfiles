@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+[ -z $TMUX ] || return 1
+
+tmux kill-server 2> /dev/null || true
+
+tmux new-session -d -s default -c "$XDG_CONFIG_HOME"
+tmux rename-window dot
+tmux split-window -h -t dot -c "$XDG_CONFIG_HOME"
+
+tmux new-window -d -n home -c "$HOME"
+tmux split-window -h -t home -c "$HOME"
+
+tmux attach-session -d -t default
