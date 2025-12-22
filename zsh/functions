@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+tns() {
+  tmux kill-server 2> /dev/null || true
+  cat "$XDG_CONFIG_HOME/tmux/sessions" | envsubst | xargs -n2 sh -c 'tmux new-session -d -s $1 -c $2 \; split-window -h -c $2' sh
+  tmux attach -c "$HOME"
+}
