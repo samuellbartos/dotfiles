@@ -96,3 +96,102 @@ alias gt='git tag'
 
 # prune orphaned local branches
 alias gx="git for-each-ref refs/heads --format '%(refname:short) %(upstream:track,nobracket)' | awk '/ gone/{print \$1}' | xargs git branch --delete --force"
+
+# K8S
+alias k='kubectl'
+
+# kubectl apply
+alias ka='kubectl apply --recursive --filename'
+
+# kubectl config
+alias kc='kubectl config'
+alias kcv='kubectl config view --minify'
+alias kcns='kubectl config set-context --current --namespace'
+
+# kubectl get
+alias kg='kubectl get'
+alias kga='kubectl get all,cm,secret,ing'
+alias kgcj='kubectl get cronjobs --output wide'
+alias kgcm='kubectl get configmaps'
+alias kgd='kubectl get deployments --output wide'
+alias kgds='kubectl get daemonsets --output wide'
+alias kgev='kubectl get events'
+alias kging='kubectl get ingresses'
+alias kgj='kubectl get jobs --output wide'
+alias kgno='kubectl get nodes --output wide'
+alias kgns='kubectl get namespaces'
+alias kgpc='kubectl get priorityclasses'
+alias kgpv='kubectl get persistentvolume'
+alias kgpvc='kubectl get persistentvolumeclaims'
+alias kgpo='kubectl get pods --output wide'
+alias kgrs='kubectl get replicasets --output wide'
+alias kgs='kubectl get secrets'
+alias kgsc='kubectl get storageclasses'
+alias kgsts='kubectl get statefulsets --output wide'
+alias kgsvc='kubectl get services'
+
+# kubectl delete
+alias krm='kubectl delete'
+alias krmcj='kubectl delete cronjobs'
+alias krmcm='kubectl delete configmaps'
+alias krmd='kubectl delete deployments'
+alias krmds='kubectl delete daemonsets'
+alias krming='kubectl delete ingresses'
+alias krmj='kubectl delete jobs'
+alias krmno='kubectl delete nodes'
+alias krmns='kubectl delete namespaces'
+alias krmpc='kubectl delete priorityclasses'
+alias krmpv='kubectl delete persistentvolume'
+alias krmpvc='kubectl delete persistentvolumeclaims'
+alias krmpo='kubectl delete pods'
+alias krmrs='kubectl delete replicasets'
+alias krmsc='kubectl delete storageclasses'
+alias krmsts='kubectl delete statefulsets'
+alias krmsvc='kubectl delete services'
+
+# kubectl describe
+alias kd='kubectl describe'
+alias kdcj='kubectl describe cronjobs'
+alias kdcm='kubectl describe configmaps'
+alias kdd='kubectl describe deployments'
+alias kdds='kubectl describe daemonsets'
+alias kding='kubectl describe ingresses'
+alias kdj='kubectl describe jobs'
+alias kdno='kubectl describe nodes'
+alias kdns='kubectl describe namespaces'
+alias kdpc='kubectl describe priorityclasses'
+alias kdpv='kubectl describe persistentvolume'
+alias kdpvc='kubectl describe persistentvolumeclaims'
+alias kdpo='kubectl describe pods'
+alias kdrs='kubectl describe replicasets'
+alias kdsc='kubectl describe storageclasses'
+alias kdsts='kubectl describe statefulsets'
+alias kdsvc='kubectl describe services'
+
+# kubectl edit
+alias ke='kubectl edit'
+alias kepo='kubectl edit pods'
+alias kers='kubectl edit replicasets'
+alias kesvc='kubectl edit services'
+
+# kubectl exec
+alias kex='kubectl exec'
+alias kexit='kubectl exec --stdin --tty'
+
+# kubectl logs
+alias kl='kubectl logs'
+
+# kubectl rollout
+alias kr='kubectl rollout'
+alias krhd='kubectl rollout history deployments'
+alias krrd='kubectl rollout resume deployments'
+alias krsd='kubectl rollout status deployments'
+alias krssts='kubectl rollout status statefulsets'
+alias krud='kubectl rollout undo deployments'
+
+# kubectl port-forward
+alias kpf='kubectl port-forward'
+
+# kubectl scale
+alias ksd='kubectl scale deployments'
+alias ksrs='kubectl scale replicasets'
