@@ -100,3 +100,59 @@ alias gt='git tag'
 
 # remove tracking branches deleted on remote
 alias gx="git fetch && git remote show origin | sed -n '/HEAD branch/s/.*: //p' | xargs git checkout && git pull && git branch -vv | awk '/: gone]/{print \$1}' | xargs git branch -D"
+
+# K8S
+alias k='kubectl'
+
+# kubectl apply
+alias ka='kubectl apply -f'
+
+# kubectl get
+alias kg='kubectl get'
+alias kgcm='kubectl get configmaps'
+alias kgev='kubectl get events'
+alias kgno='kubectl get nodes'
+alias kgns='kubectl get namespaces'
+alias kgpv='kubectl get persistentvolume'
+alias kgpvc='kubectl get persistentvolumeclaims'
+alias kgpo='kubectl get pods'
+alias kgsc='kubectl get storageclasses'
+
+# kubectl delete
+alias krm='kubectl delete'
+alias krmcm='kubectl delete configmaps'
+alias krmno='kubectl delete nodes'
+alias krmns='kubectl delete namespaces'
+alias krmpv='kubectl delete persistentvolume'
+alias krmpvc='kubectl delete persistentvolumeclaims'
+alias krmpo='kubectl delete pods'
+alias krmsc='kubectl delete storageclasses'
+
+# kubectl describe
+alias kd='kubectl describe'
+alias kdcm='kubectl describe configmaps'
+alias kdno='kubectl describe nodes'
+alias kdns='kubectl describe namespaces'
+alias kdpv='kubectl describe persistentvolume'
+alias kdpvc='kubectl describe persistentvolumeclaims'
+alias kdpo='kubectl describe pods'
+alias kdsc='kubectl describe storageclasses'
+
+# kubectl edit
+alias ke='kubectl edit'
+alias kepo='kubectl edit pods'
+
+# kubectl exec
+alias kex='kubectl exec'
+alias kexit='kubectl exec --stdin --tty'
+
+# kubectl logs
+alias kl='kubectl logs'
+
+# kubectl port-forward
+alias kpf='kubectl port-forward'
+
+# kubectl config
+alias kc='kubectl config'
+alias kcv='kubectl config view --minify'
+alias kcns='kubectl config set-context --current --namespace'
