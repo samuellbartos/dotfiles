@@ -1,28 +1,24 @@
-# python compiler stores bytecodes here
-*__pycache__*
-# jupyter notebooks
-*.ipynb
-# coverage report from pytest's coverage plugin
-*.coverage
-# dir for egg distribution of python packages
-*.eggs
-# egg metadata
-*.egg-info
-# macOS attributes for dirs, e.g. position of icons, etc.
-*.DS_Store
-# dir for wheel distribution of python packages
-*build
-# dir for source distribution of python packages
-*dist
-# artefacts from hypothesis package (property based testing)
-*.hypothesis
-# secrets related to the repo
-*.env*
-# temporary stuff
-*tmp
-# dir for cabal artifacts
-*dist-newstyle
-# pyspark
-*.parquet.crc
-# pip
-*pip
+# MACOS
+
+# attributes for dirs, e.g. position of icons, etc.
+.DS_Store
+
+# PYTHON
+__pycache__
+.ipynb
+.coverage
+.eggs
+.egg-info
+build
+dist
+pip
+.venv
+.parquet.crc
+.hypothesis
+ty.toml
+
+# HASKELL
+dist-newstyle
+
+# OTHER
+tmp
