@@ -16,8 +16,6 @@
 *dist
 # artefacts from hypothesis package (property based testing)
 *.hypothesis
-# secrets related to the repo
-*.env*
 # temporary stuff
 *tmp
 # dir for cabal artifacts
