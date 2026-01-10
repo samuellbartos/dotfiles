@@ -109,6 +109,7 @@ alias ka='kubectl apply -f'
 
 # kubectl get
 alias kg='kubectl get'
+alias kga='kubectl get all'
 alias kgcm='kubectl get configmaps'
 alias kgev='kubectl get events'
 alias kgno='kubectl get nodes'
