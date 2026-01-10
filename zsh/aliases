@@ -105,7 +105,7 @@ alias gx="git fetch && git remote show origin | sed -n '/HEAD branch/s/.*: //p' 
 alias k='kubectl'
 
 # kubectl apply
-alias ka='kubectl apply -f'
+alias ka='kubectl apply --recursive --filename'
 
 # kubectl get
 alias kg='kubectl get'
