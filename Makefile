@@ -1,47 +1,45 @@
 MAKEFLAGS += --always-make
 
+xdg:
+ifndef XDG_DATA_HOME
+	$(error XDG_DATA_HOME is undefined)
+endif
+
 version:
 	@cat VERSION
 
 hook:
 	git config --local core.hooksPath .githooks
 
-alacritty:
-	brew install --cask alacritty
+shell:
+	mkdir -p "${HOME}/.local/bin"
+	mkdir -p "${HOME}/.local/state/zsh"
+	mkdir -p "${HOME}/.cache/zsh"
+	ln -sf "${HOME}/.config/zsh/.zshenv" "${HOME}/.zshenv"
+	exec zsh
 
-rm-alacritty:
-	brew uninstall --cask alacritty
+rm-shell:
+	rm -rf "${HOME}/.zshenv"
+	rm -rf "${HOME}/.cache/zsh"
+	rm -rf "${HOME}/.local/state/zsh"
+	rm -rf "${HOME}/.local/bin"
 
-zsh:
-	mkdir -p ${HOME}/.local/bin
-	mkdir -p ${HOME}/.local/state/zsh
-	mkdir -p ${HOME}/.cache/zsh
-	ln -sf ${HOME}/.config/zsh/.zshenv ${HOME}/.zshenv
-
-rm-zsh:
-	rm -r ${HOME}/.local/state/zsh
-	rm -r ${HOME}/.cache/zsh
-	rm ${HOME}/.zshenv
-
-ripgrep:
+core: xdg
+	brew install git
+	brew install tmux
+	cp tmux/session "${HOME}/.tmux-session"
 	brew install ripgrep
-
-rm-ripgrep:
-	brew uninstall ripgrep
-
-fzf:
 	brew install fzf
-
-rm-fzf:
-	brew uninstall fzf
-
-xdg:
-	source ${HOME}/.zshenv
-
-nvim: xdg
 	brew install nvim
 	sh -c 'curl -fLo "${XDG_DATA_HOME}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+	brew install --cask alacritty
 
-rm-nvim: xdg
+rm-core:
+	brew uninstall --cask alacritty
 	rm "${XDG_DATA_HOME}"/nvim/site/autoload/plug.vim
 	brew uninstall nvim
+	brew uninstall fzf
+	brew uninstall ripgrep
+	rm "${HOME}/.tmux-session"
+	brew uninstall tmux
+	brew uninstall git
