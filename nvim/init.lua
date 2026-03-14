@@ -71,6 +71,9 @@ vim.opt.cursorline = true
 -- show line numbers
 vim.opt.number = true
 
+-- show errors over line numbers
+vim.opt.signcolumn = "number"
+
 -- disable the swapfile
 vim.opt.swapfile = false
 
@@ -123,6 +126,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- no jump on search
+vim.keymap.set("n", "*", "*N", { silent = true })
+vim.keymap.set("n", "#", "#N", { silent = true })
+
 -- fzf
-vim.keymap.set("n", "<C-t>", '<Cmd>lua require("fzf-lua").files()<CR>')
-vim.keymap.set("n", "<C-g>", '<Cmd>lua require("fzf-lua").live_grep()<CR>')
+vim.keymap.set("n", "<C-t>", "<Cmd>FzfLua files<CR>")
+vim.keymap.set("n", "<C-g>", "<Cmd>FzfLua live_grep<CR>")
