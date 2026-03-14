@@ -25,14 +25,13 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # PYTHON
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"  # ipython
-export PYTHONDONTWRITEBYTECODE="1"  # don't create .pyc files
+export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 export PYTHONUNBUFFERED="1"  # don't buffer stdout
-
-# PYTHON VIRTUALENV
-export VIRTUAL_ENV_DISABLE_PROMPT=1  # don't modify the prompt
-export VENV="$XDG_DATA_HOME/python/venv/default"  # venv location
-[ ! -d "$VENV" ] && $HOMEBREW_PREFIX/opt/python/libexec/bin/python -m venv "$VENV"  # create using brew python
-source "$VENV/bin/activate"
+export UV_MANAGED_PYTHON=1
+export UV_NATIVE_TLS=true
+export RUFF_CACHE_DIR="$XDG_CACHE_HOME/ruff"
+export MYPY_CACHE_DIR="$XDG_CACHE_HOME/mypy"
+export PYTEST_ADDOPTS="--override-ini cache_dir=$XDG_CACHE_HOME/pytest"
 
 # HASKELL
 export GHCUP_USE_XDG_DIRS=1  # ghcup
