@@ -1,20 +1,6 @@
 -- PLUGINS
 
 local vim = vim
-local Plug = vim.fn["plug#"]
-
-vim.call("plug#begin")
-
-Plug("junegunn/fzf", { ["do"] = function()
-  vim.fn["fzf#install"]()
-end })
-Plug("ibhagwan/fzf-lua")
-
-Plug("lervag/vimtex")
-
-Plug("m4xshen/hardtime.nvim")
-
-vim.call("plug#end")
 
 
 -- DEPENDENCIES
