@@ -57,9 +57,6 @@ vim.opt.cursorline = true
 -- show line numbers
 vim.opt.number = true
 
--- show errors over line numbers
-vim.opt.signcolumn = "number"
-
 -- disable the swapfile
 vim.opt.swapfile = false
 
@@ -119,3 +116,19 @@ vim.keymap.set("n", "#", "#N", { silent = true })
 -- fzf
 vim.keymap.set("n", "<C-t>", "<Cmd>FzfLua files<CR>")
 vim.keymap.set("n", "<C-g>", "<Cmd>FzfLua live_grep<CR>")
+
+-- LSP
+
+-- show errors over line numbers
+vim.opt.signcolumn = "number"
+
+-- make virtual text for diagnostics visible
+vim.diagnostic.config({
+  virtual_text = true,
+  jump = {
+    float = true
+  }
+})
+
+-- python
+vim.lsp.enable('ty')
