@@ -117,3 +117,19 @@ vim.keymap.set("n", "#", "#N", { silent = true })
 vim.keymap.set("n", "<C-t>", "<Cmd>FzfLua files<CR>")
 vim.keymap.set("n", "<C-g>", "<Cmd>FzfLua live_grep<CR>")
 vim.keymap.set("v", "<C-g>", "<Cmd>FzfLua grep_visual<CR>")
+
+-- LSP
+
+-- show errors over line numbers
+vim.opt.signcolumn = "number"
+
+-- make virtual text for diagnostics visible
+vim.diagnostic.config({
+  virtual_text = true,
+  jump = {
+    float = true
+  }
+})
+
+-- python
+vim.lsp.enable('ty')
