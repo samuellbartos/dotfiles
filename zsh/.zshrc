@@ -17,6 +17,7 @@ autoload -Uz compinit
 setopt no_auto_menu  # dont cycle between ambiguous completions
 bindkey -e  # emacs key bindings
 zle_highlight=('paste:none')  # disable highlighting of pasted text
+zstyle ':completion:*' completer _expand_alias _complete _ignored # expand aliases on tab
 
 # edit command line
 autoload -Uz edit-command-line
