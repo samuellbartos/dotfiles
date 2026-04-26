@@ -41,3 +41,11 @@ rm-core:
 	brew uninstall fzf
 	brew uninstall ripgrep
 	brew uninstall git
+
+python: xdg
+	brew install uv
+	uv tool install ty@latest
+
+rm-python:
+	uv tool uninstall ty
+	brew uninstall uv
