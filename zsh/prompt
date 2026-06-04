@@ -1,11 +1,9 @@
-# setup vcs info
-autoload -Uz vcs_info
-precmd() { vcs_info }
+function branch() {
+  b=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+  [[ "$b" != "" ]] && echo " $b"
+}
+
 setopt prompt_subst
 
-# vcs info styles
-zstyle ':vcs_info:git:*' formats '(%b) '
-zstyle ':vcs_info:git:*' actionformats '(%b|%a) '
-
 # prompt format
-export PROMPT='%B%~ %F{yellow}$vcs_info_msg_0_%f%(?.%F{white}.%F{red})>%f%b '
+export PROMPT='%B%~%F{yellow}$(branch) %(?.%F{white}.%F{red})%(!.#.$)%f%b '
