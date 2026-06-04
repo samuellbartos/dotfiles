@@ -26,6 +26,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # PYTHON
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"  # ipython
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
+export PYTHON_HISTORY="$XDG_CACHE_HOME/python/history"
 export PYTHONUNBUFFERED="1"  # don't buffer stdout
 export UV_MANAGED_PYTHON=1
 export UV_NATIVE_TLS=true
@@ -40,3 +41,9 @@ export CABAL_CONFIG="$XDG_CONFIG_HOME/cabal/config"  # cabal
 # AWS
 export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME/aws/credentials"
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
+
+# XDG compliance
+export JFROG_CLI_HOME_DIR="$XDG_CONFIG_HOME/jfrog"
+export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
+export TENV_ROOT="$XDG_DATA_HOME/tenv"
+export PLAYWRIGHT_BROWSERS_PATH="$XDG_CACHE_HOME/ms-playwright"
