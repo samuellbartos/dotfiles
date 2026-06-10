@@ -12,7 +12,7 @@ setopt hist_ignore_all_dups  # delete an old recorded event if a new event is a 
 zcompdump="$XDG_CACHE_HOME/zsh/zcompdump"
 autoload -Uz compinit
 # only run full compinit once per day
-[ ! "$(find $zcompdump -mtime -1 2>/dev/null)" ] && compinit -d $zcompdump || compinit -C -d $zcompdump
+[[ -n $zcompdump(#qNmh-24) ]] && compinit -C -d $zcompdump || compinit -d $zcompdump
 
 setopt no_auto_menu  # dont cycle between ambiguous completions
 bindkey -e  # emacs key bindings
