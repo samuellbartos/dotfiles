@@ -25,6 +25,10 @@ zle -N edit-command-line
 bindkey '^xe' edit-command-line
 bindkey '^x^e' edit-command-line
 
+# help for zsh buildins
+unalias run-help
+autoload run-help
+
 # MODULES
 [[ -s "$XDG_CONFIG_HOME/zsh/path" ]] && source "$XDG_CONFIG_HOME/zsh/path"
 [[ -s "$XDG_CONFIG_HOME/zsh/aliases" ]] && source "$XDG_CONFIG_HOME/zsh/aliases"
